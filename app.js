@@ -972,11 +972,11 @@ function initClimateVis(containerSelector) {
       }
     })
     $container.html(template)
-    $('#climate-video-2').hide()
-    $('#climate-video-1').hide()
     $('#climate-video-1')[0].play()
     $('#climate-video-2')[0].play()
     $('#climate-video-3')[0].play()
+    $('#climate-video-2').hide()
+    $('#climate-video-1').hide()
     
     $('.climate-graph').hide() 
 
