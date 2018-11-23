@@ -766,11 +766,9 @@ function buildGalleryHTML( template, slideshowName ) {
 }
 
 function loadSlideshowFromTemplate(gallerySelector, slideshowName, aspectRatio, shouldShowControls, callback) {
-  $.ajax({url:"templates/galleryCellTemplate.txt", success: (data) => {
-    html = buildGalleryHTML( data, slideshowName) 
-    $(gallerySelector).html(html)
-    setupSlideshow(gallerySelector, slideshowName, aspectRatio, shouldShowControls, callback)
-  }})
+  html = buildGalleryHTML( data, slideshowName) 
+  $(gallerySelector).html(html)
+  setupSlideshow(gallerySelector, slideshowName, aspectRatio, shouldShowControls, callback)
 }
 
 function loadTemplate(url, callback) {
