@@ -6934,36 +6934,36 @@ th.hide-for-touch {
     display: table-cell !important; } }
 @font-face {
   font-family: 'Univers';
-  src: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/UniversLTStd.eot");
+  src: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/UniversLTStd.eot");
   /* IE9 Compat Modes */
-  src: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/UniversLTStd.eot?#iefix") format("embedded-opentype"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/UniversLTStd.woff") format("woff"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/UniversLTStd.ttf") format("truetype"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/UniversLTStd.svg#668fd4ae5c82154950a7a659d7a7f5f3") format("svg");
+  src: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/UniversLTStd.eot?#iefix") format("embedded-opentype"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/UniversLTStd.woff") format("woff"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/UniversLTStd.ttf") format("truetype"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/UniversLTStd.svg#668fd4ae5c82154950a7a659d7a7f5f3") format("svg");
   /* Legacy iOS */
   font-weight: 400; }
 @font-face {
   font-family: 'Circular';
-  src: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-bold-s.eot");
+  src: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-bold-s.eot");
   /* IE9 Compat Modes */
-  src: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-bold-s.eot?#iefix") format("embedded-opentype"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-bold-s.woff") format("woff"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-bold-s.ttf") format("truetype"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-bold-s.svg#668fd4ae5c82154950a7a659d7a7f5f3") format("svg");
+  src: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-bold-s.eot?#iefix") format("embedded-opentype"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-bold-s.woff") format("woff"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-bold-s.ttf") format("truetype"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-bold-s.svg#668fd4ae5c82154950a7a659d7a7f5f3") format("svg");
   /* Legacy iOS */
   font-weight: 600; }
 @font-face {
   font-family: 'Circular';
-  src: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-medium-s.eot");
+  src: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-medium-s.eot");
   /* IE9 Compat Modes */
-  src: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-medium-s.eot?#iefix") format("embedded-opentype"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-medium-s.woff") format("woff"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-medium-s.ttf") format("truetype"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-medium-s.svg#668fd4ae5c82154950a7a659d7a7f5f3") format("svg");
+  src: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-medium-s.eot?#iefix") format("embedded-opentype"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-medium-s.woff") format("woff"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-medium-s.ttf") format("truetype"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-medium-s.svg#668fd4ae5c82154950a7a659d7a7f5f3") format("svg");
   /* Legacy iOS */
   font-weight: 500; }
 @font-face {
   font-family: 'Circular';
-  src: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-book-s.eot");
+  src: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-book-s.eot");
   /* IE9 Compat Modes */
-  src: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-book-s.eot?#iefix") format("embedded-opentype"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-book-s.woff") format("woff"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-book-s.ttf") format("truetype"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/lineto-circular-book-s.svg#668fd4ae5c82154950a7a659d7a7f5f3") format("svg");
+  src: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-book-s.eot?#iefix") format("embedded-opentype"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-book-s.woff") format("woff"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-book-s.ttf") format("truetype"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/lineto-circular-book-s.svg#668fd4ae5c82154950a7a659d7a7f5f3") format("svg");
   /* Legacy iOS */
   font-weight: 400; }
 @font-face {
   font-family: 'icon-social';
-  src: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/icon-social.eot?71501330");
-  src: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/icon-social.eot?71501330#iefix") format("embedded-opentype"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/icon-social.woff?71501330") format("woff"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/icon-social.ttf?71501330") format("truetype"), url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/type/icon-social.svg?71501330#icon-social") format("svg");
+  src: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/icon-social.eot?71501330");
+  src: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/icon-social.eot?71501330#iefix") format("embedded-opentype"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/icon-social.woff?71501330") format("woff"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/icon-social.ttf?71501330") format("truetype"), url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/type/icon-social.svg?71501330#icon-social") format("svg");
   font-weight: normal;
   font-style: normal; }
 .arrow {
@@ -7063,9 +7063,9 @@ body {
   #logo-panel.bg-red {
     background-color: #be1e20; }
   #logo-panel.logo-stroke-white {
-    background-image: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/image/assets/icewatch-logo-white.svg"); }
+    background-image: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/image/assets/icewatch-logo-white.svg"); }
   #logo-panel.logo-stroke-red {
-    background-image: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/image/assets/icewatch-logo-red.svg"); }
+    background-image: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/image/assets/icewatch-logo-red.svg"); }
 
 .scrollto {
   cursor: pointer; }
@@ -7252,7 +7252,7 @@ body.mobile .media-gallery {
   position: relative; }
 body.mobile .mobile-intro-bg {
   background-color: white;
-  background-image: url("http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/video/poster/ICE_Watch_SlowMO_02.jpg");
+  background-image: url("https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/video/poster/ICE_Watch_SlowMO_02.jpg");
   background-size: cover;
   width: 100%;
   height: 100vh; }
