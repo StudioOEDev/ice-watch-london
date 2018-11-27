@@ -7407,14 +7407,18 @@ a.social-button {
   color: white;
   cursor: pointer; }
 
-.climate-title {
+.climate-title-wrapper {
   width: 100%;
-  text-align: center;
   top: 50px;
-  position: fixed;
-  font-size: 40px;
-  text-decoration: underline;
-  color: #be1e20; }
+  text-align: center;
+  position: fixed; }
+
+.climate-title {
+  display: inline-block;
+  width: auto;
+  font-size: 35px;
+  color: #be1e20;
+  border-bottom: 4px solid #be1e20; }
 
 .climate-graph {
   position: fixed;
@@ -7447,6 +7451,15 @@ a.social-button {
   position: absolute;
   top: 10px;
   z-index: -10 !important; }
+
+.cell-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 30px;
+  font-size: 20px;
+  color: #be1e20;
+  z-index: 20 !important; }
 
 
 /*# sourceMappingURL=app.css.map*/
