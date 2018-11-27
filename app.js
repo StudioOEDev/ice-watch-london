@@ -735,7 +735,17 @@ function buildGalleryCellHTML( template, params) {
 
 function buildGalleryHTML( template, slideshowName ) {
   html = ''
+  var ordered_at_slide_data = []
   at_media_data.forEach( (e) => {
+    if ('slideshow' + e.slideshow_id == slideshowName) {
+      ordered_at_slide_data.push(e)
+    }
+  })
+
+  ordered_at_slide_data = ordered_at_slide_data.sort((a,b) => {return parseInt(a.id) - parseInt(b.id)})
+  console.log(ordered_at_slide_data)
+
+  ordered_at_slide_data.forEach( (e) => {
     if ('slideshow' + e.slideshow_id == slideshowName) {
       var galleryCell = $('<div class="gallery-cell"><div>')
       var src_url = e.video[0].url
