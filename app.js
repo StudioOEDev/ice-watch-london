@@ -685,7 +685,7 @@ function setupSlideshow(gallerySelector, slideshowName, aspectRatio, shouldShowC
                         // Hide videojs controls
                         $(v).closest('.video-js').find('.vjs-control-bar, .vjs-big-play-button').remove();
                         if(index === 0) {
-                            //player.play();
+                            player.play();
                         }
                     }
                     // Hide fullscreen
@@ -791,14 +791,6 @@ function buildMobileClimateVisHTML() {
     if (cell.find('img')[0]) {
       //cell.toggleClass('gallery-cell')
       cell.css({height:'auto'})
-      /*
-      var title = cell.find('.cell-title')
-      //title.remove()
-      var media = $(cell.children()[2])
-      console.log(title)
-      media.append(title)
-      cellHTML = media[0].outerHTML 
-      */
       cellHTML = cell[0].outerHTML
     } else {
       cellHTML = cell[0].outerHTML
@@ -806,12 +798,10 @@ function buildMobileClimateVisHTML() {
     html += cellHTML
 
     // INSERT DESCRIPTION (real dirty now)
-    console.log(slideDescs[i])
     var descBaseHTML = '<div class="row full-width white"><div class="columns small-12"><section class="content-section" id="vis-desc-'+i+'">DESCP</section></div></div>' 
     var desc = $(descBaseHTML)
     var sec = $($($(desc).children()[0]).children()[0])
     sec.text(slideDescs[i])
-    console.log(sec)
     html += desc[0].outerHTML
   })
   return html
@@ -889,7 +879,13 @@ function initSlideshow(gallerySelector, slideshowName, aspectRatio, shouldShowCo
         } else if (!isMobile && slideshowName == 'slideshow2') {
           initClimateVis(gallerySelector)
         } else if (isMobile && slideshowName == 'slideshow2') {
-          initClimateVisMobile(gallerySelector)
+          if (at_media_data.length == 0) {
+            getAirtableData( () => {
+              initClimateVisMobile(gallerySelector)
+            })
+          } else {
+              initClimateVisMobile(gallerySelector)
+          }
         } else {
           if (at_media_data.length == 0) {
             getAirtableData( () => {
@@ -58378,7 +58374,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<div class=\"gallery-cell\"><video src=\"http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/video/ICE_Watch_SlowMO_02.mp4\" poster=\"http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/video/poster/ICE_Watch_SlowMO_02.jpg\" id=\"video_intro_1\" width=\"auto\" height=\"auto\" loop=\"loop\" data-setup=\"{}\" muted=\"muted\" class=\"video-js vjs-sublime-skin\"></video></div>");;return buf.join("");
+buf.push("<div class=\"gallery-cell\"><video src=\"http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchlondon/video/intro.mp4\" poster=\"\" id=\"video_intro_1\" width=\"auto\" height=\"auto\" loop=\"loop\" data-setup=\"{}\" muted=\"muted\" class=\"video-js vjs-sublime-skin\"></video></div>");;return buf.join("");
 };
 if (typeof define === 'function' && define.amd) {
   define([], function() {
