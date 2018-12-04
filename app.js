@@ -365,9 +365,12 @@ $(document).ready(function(){
 
 	// Click to scroll to info section
 	$('.scrollto').click(function(e){
-		$.scrollTo(document.getElementById($(this).data('scrollto')), 650, {
+        var elId = $(this).data('scrollto')
+        var el = document.getElementById(elId)
+		$.scrollTo(el, 650, {
 			easing: 'easeOutQuad',
-			offset: -57
+			//offset: -20, 
+			offset: elId == 'media-gap-3' ? 0 : -20
 		});
 		return false;
 	});
@@ -509,11 +512,9 @@ function destroySlideshow(gallerySelector) {
 			console.log('Cound not destroy slideshow');
 		}
 	}
-
 }
 
 function setupSlideshow(gallerySelector, slideshowName, aspectRatio, shouldShowControls, callback) {
-
     resizeSlideshow();
     var slideCount = $(gallerySelector).find('img, video').length;
     $(gallerySelector).each(function() {
@@ -549,7 +550,6 @@ function setupSlideshow(gallerySelector, slideshowName, aspectRatio, shouldShowC
 
         // Add arrow UI elements
         if(showControls) {
-
             var $viewport = $(this).find('.flickity-viewport');
             var $left, $right;
             if(!isMobile) {

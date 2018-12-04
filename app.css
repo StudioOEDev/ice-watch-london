@@ -7462,7 +7462,7 @@ a.social-button {
   text-align: right;
   right: 100px;
   bottom: 30px;
-  font-size: 35px;
+  font-size: .85rem;
   color: white;
   z-index: 20 !important; }
 
