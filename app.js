@@ -1168,7 +1168,7 @@ function initWaypoints() {
 				destroySlideshow('.media-gallery');
 				initSlideshow('.media-gallery', 'slideshow1', aspectRatio, true, function() {
 					if(!isMobile) {
-						//playSlideshow('.media-gallery');
+						playSlideshow('.media-gallery');
 					}
 				});
 				$('.logo-stroke-red, .logo-stroke-white').hide();
@@ -1349,8 +1349,11 @@ function playSlideshow(gallerySelector) {
 	if(el && el.nodeName === 'VIDEO') {
 		var id = $(el).attr('id');
 		videojs(id).currentTime(0);
-        if (id == 'video_intro_1_html5_api')
+        if (id == 'video_intro_1_html5_api') {
           videojs(id).play();
+        } else {
+          videojs(id).play();
+        }
 	}
 }
 

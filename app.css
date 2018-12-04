@@ -7459,10 +7459,11 @@ a.social-button {
 .cell-title {
   position: absolute;
   width: 100%;
-  text-align: center;
-  margin-top: 30px;
-  font-size: 20px;
-  color: #be1e20;
+  text-align: right;
+  right: 100px;
+  bottom: 30px;
+  font-size: 35px;
+  color: white;
   z-index: 20 !important; }
 
 
