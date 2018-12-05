@@ -263,7 +263,7 @@ var WEBGL = {
 
 };
 
-var assetPath = 'http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis';
+var assetPath = 'http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchlondon';
 
 var isMobile;
 
@@ -737,7 +737,10 @@ function buildCellHTML( e ) {
 
     var galleryCell = $('<div class="gallery-cell"><div>')
     var cellTitle = $('<div class="cell-title"><div>')
-    galleryCell.append(cellTitle)
+
+    if (!isMobile) galleryCell.append(cellTitle)
+    console.log('Mobile:',isMobile)
+
     cellTitle.html(e.text)
     var src_url = e.video[0].url
     var url_parts = src_url.split('.')
