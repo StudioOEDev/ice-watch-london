@@ -7205,19 +7205,6 @@ section.media-gap {
   padding: 2em 0 1em 0;
   border-top: 4px solid white; }
 
-#legal p:not(.subsection-heading) {
-  font-size: .6em; }
-#legal #legal-bt {
-  cursor: pointer; }
-  #legal #legal-bt .arrow {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    transform: rotate(0deg); }
-    #legal #legal-bt .arrow.down {
-      transform: rotate(90deg); }
-
 .vjs-loading-spinner {
   top: 90%;
   visibility: hidden; }
@@ -7465,6 +7452,36 @@ a.social-button {
   font-size: .85rem;
   color: white;
   z-index: 20 !important; }
+
+#sources {
+  margin: 0px; }
+  #sources p:not(.subsection-heading) {
+    font-size: .6em; }
+  #sources #sources-bt {
+    cursor: pointer; }
+    #sources #sources-bt .arrow {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      transform: rotate(0deg); }
+      #sources #sources-bt .arrow.down {
+        transform: rotate(90deg); }
+
+#legal {
+  margin-top: 0px; }
+  #legal p:not(.subsection-heading) {
+    font-size: .6em; }
+  #legal #legal-bt {
+    cursor: pointer; }
+    #legal #legal-bt .arrow {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      transform: rotate(0deg); }
+      #legal #legal-bt .arrow.down {
+        transform: rotate(90deg); }
 
 
 /*# sourceMappingURL=app.css.map*/
