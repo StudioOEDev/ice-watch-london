@@ -1497,7 +1497,7 @@ function setupDataConsole() {
     zIndex: 1
   })
 
-  var weatherAPIUrl = 'http://api.openweathermap.org/data/2.5/forecast?id=2643743&APPID=705a22e689f9613a9a709ac814037ea0'
+  var weatherAPIUrl = 'https://api.openweathermap.org/data/2.5/forecast?id=2643743&APPID=705a22e689f9613a9a709ac814037ea0'
 
   $.get(weatherAPIUrl, (data) => {
     londonWeatherData = data
