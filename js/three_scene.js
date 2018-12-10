@@ -230,7 +230,7 @@ function animate() {
       var r = Math.sin( clock.getElapsedTime() )
       morph.lookAt( new THREE.Vector3( mouse.x*window.innerWidth*10, mouse.y*innerHeight*10, -10000))
       //var r = 1
-      setMorphVertices(morph, small, large, r)
+      //setMorphVertices(morph, small, large, r)
       //stats.update();
       render();
     }

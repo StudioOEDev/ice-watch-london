@@ -157,7 +157,7 @@ var description = 'A project by Olafur Eliasson and Minik Rosing, on the occasio
 var pageUrl = 'http://icewatchlondon.com'
 var image = 'https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/image/assets/thumbnail.jpg'
 var twitterHandle = '@olafureliasson'
-buf.push("<!DOCTYPE html><html lang=\"en\"><head><title>" + (jade.escape(null == (jade_interp = 'Ice Watch London') ? "" : jade_interp)) + "</title><meta name=\"description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta name=\"keywords\" content=\"Ice Watch,COP 21,Climate Change,United Nations,Paris,London,Olafur Eliasson,Minik Rosing,Greenland,Ice\"><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\"><meta name=\"twitter:card\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta name=\"twitter:site\"" + (jade.attr("content", '' + (twitterHandle) + '', true, true)) + "><meta name=\"twitter:title\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta name=\"twitter:description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta name=\"twitter:creator\"" + (jade.attr("content", '' + (twitterHandle) + '', true, true)) + "><meta name=\"twitter:image\"" + (jade.attr("content", '' + (image) + '', true, true)) + "><meta property=\"og:title\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta property=\"og:type\" content=\"website\"><meta property=\"og:url\"" + (jade.attr("content", '' + (pageUrl) + '', true, true)) + "><meta property=\"og:image\"" + (jade.attr("content", '' + (image) + '', true, true)) + "><meta property=\"og:description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta property=\"og:site_name\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><link rel=\"icon\" type=\"image/png\" href=\"https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/image/assets/favicon.png\"><link rel=\"stylesheet\" href=\"vendor.css\"><link rel=\"stylesheet\" href=\"app.css\"><script src=\"js/libs/jquery-3.3.1.min.js\"></script><script src=\"js/build/three.js\"></script><script src=\"js/shaders/ShaderTranslucent.js\"></script><script src=\"js/libs/inflate.min.js\"></script><script src=\"js/loaders/FBXLoader.js\"></script><script src=\"js/controls/OrbitControls.js\"></script><script src=\"js/WebGL.js\"></script><script src=\"js/libs/stats.min.js\"></script><script type=\"text/javascript\" src=\"js/three_scene.js\"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\nm=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n})(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\nga('create', 'UA-30609807-3', 'auto');\nga('send', 'pageview');</script><div class=\"media-gallery\"></div><div id=\"logo-panel\" data-scrollto=\"content-panel\" class=\"logo-stroke-red scrollto\"></div><div id=\"logo-panel\" data-scrollto=\"content-panel\" class=\"logo-stroke-white bg-red scrollto\"></div><div id=\"content-panel\" class=\"content-toggle\"><ul id=\"navigation\" class=\"columns hide-for-small-only medium-4 large-3 content-toggle hidden\"><li id=\"nav-project-info\"><a href=\"#project-info\" data-scrollto=\"project-info\" class=\"scrollto\">Project Info</a></li><li id=\"nav-climate-facts\"><a href=\"#climate-facts\" data-scrollto=\"climate-facts\" class=\"scrollto\">Climate Facts</a></li><li id=\"nav-resources\"><a href=\"#resources\" data-scrollto=\"resources\" class=\"scrollto\">Resources</a></li><li id=\"nav-history\"><a href=\"#media-gap-3\" data-scrollto=\"media-gap-3\" class=\"scrollto\">History</a></li><li id=\"nav-press\"><a href=\"#press\" data-scrollto=\"press\" class=\"scrollto\">Press</a></li><li id=\"nav-instagram\"><a href=\"https://www.instagram.com/explore/tags/icewatchlondon/\">#IceWatchLondon</a></li><li id=\"nav-social\"><a href=\"http://twitter.com/share?text=Follow the journey of the ice. Ice Watch by @olafureliasson and Minik Rosing;hashtags=icewatchlondon\" class=\"twitter-popup social-button icon-1446658193_twitter_online_social_media\">&#xe800;</a><a href=\"https://www.facebook.com/studioolafureliasson/\" class=\"facebook-popup social-button icon-1446658206_online_social_media_facebook\">&#xe801;</a></li></ul><div class=\"row full-width red\"><div class=\"columns small-12\"><section id=\"intro-text\" class=\"content-section\"><h3 id=\"intro\"></h3></section></div></div><div class=\"row full-width\"><div class=\"columns small-12\"><section id=\"media-gap-1\" class=\"media-gap\"></section></div></div><div class=\"row full-width white-clear\"><div class=\"columns small-12\"><section class=\"quote-text content-section\"><h3 id=\"intro-quote\"></h3></section></div></div><div class=\"row full-width red\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section id=\"project-info\" class=\"content-section\"><p><span id=\"about-info\"> </span></p><br><div><div class=\"columns small-6 medium-6 large-6\"><a href=\"http://bloomberg.org\" style=\"border-bottom: none\" target=\"_blank\"><img src=\"http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/image/assets/bloomberg-logo-white.png\" class=\"partner-logo\"></a></div><div class=\"columns small-6 medium-6 large-6\"><a href=\"http://www.juliesbicycle.com\" style=\"border-bottom: none\" target=\"_blank\"><img src=\"http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/image/assets/julie-logo-white.png\" class=\"partner-logo\"></a></div></div><br><br><br></section></div></div><div class=\"row full-width white\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section id=\"climate-facts\" class=\"content-section\"></section></div></div><div class=\"row full-width\"><div class=\"columns small-12\"><section id=\"media-gap-2\" class=\"media-gap\"></section></div></div><!--.row.full-width.white-clear//.columns.small-12\n\t//section.quote-text.content-section\n\t\t//h3#olafur-quote\n--><div class=\"row full-width red\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section><p><span id=\"resources\"></span></p></section></div></div><div class=\"row full-width\"><div class=\"columns small-12\"><section id=\"media-gap-3\" class=\"media-gap\"></section></div></div><div class=\"row full-width white\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section><br><br><p><span id=\"history\"></span></p></section></div></div><div class=\"row full-width red\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section id=\"press\" class=\"content-section\"><p class=\"subsection-heading\">Press contacts</p><div class=\"press-item-basic-top clearfix\"><div id=\"press-contact-1\"></div></div><div class=\"press-item-basic clearfix\"><div id=\"press-contact-2\"></div></div><div class=\"press-item-basic clearfix\"><div id=\"press-contact-3\"></div></div><div class=\"press-item-basic clearfix\"><div id=\"press-contact-4\"></div></div><div class=\"press-item-basic clearfix\"><div id=\"press-contact-5\"></div></div><br><br><p class=\"subsection-heading\">Social</p><div class=\"press-item-basic-top clearfix\"><div class=\"press-item-basic clearfix\"><div id=\"twitter-list\" class=\"columns\"></div></div><div class=\"press-item-basic clearfix\"><div id=\"instagram-list\" class=\"columns\"></div></div></div><br><p class=\"subsection-heading\">Downloads</p><div id=\"press-items\"></div></section></div></div><div class=\"row full-width red\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section id=\"sources\" class=\"content-section\"><p class=\"subsection-heading\"><span id=\"sources-bt\">Data Sources&nbsp;&nbsp;<span class=\"arrow\">&#8250;</span></span></p><div id=\"sources-content\" class=\"press-item clearfix hidden\"></div></section></div></div><div class=\"row full-width red\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section id=\"legal\" class=\"content-section\"><p class=\"subsection-heading\"><span id=\"legal-bt\">Legal&nbsp;&nbsp;<span class=\"arrow\">&#8250;</span></span></p><div class=\"press-item clearfix hidden\"><p>Studio Olafur Eliasson GmbH<br/>\nChristinenstrasse 18/19, Haus 2<br/>\n10119 Berlin</p><p>Director<br/>\nOlafur Eliasson</p><p>Contact<br/>\nstudio@olafureliasson.net<br/>\n+49 30 2000 391 50</p><p>VAT ID: DE 247257125<br/>\nTax No.: 37/415/21533<br/>\nCommercial registry: HRB 99366<br/>\nRegistration office: Amtsgericht Charlottenburg</p><p>The copyright for published objects developed by Studio Olafur Eliasson GmbH itself remains only with Studio Olafur Eliasson GmbH. The use or sharing of such images, audio features, video sequences, and texts in other electronic or printed publications is permitted for all non-commercial purposes.</p><p>Studio Olafur Eliasson GmbH explicitly reserves the right to alter, supplement, or delete parts or the whole of the website's content, or to temporarily or completely discontinue publication without further notice.</p><p>Studio Olafur Eliasson GmbH has no influence whatsoever on content offered through direct or indirect links to other web providers and pages and does not endorse any of this content – with the exception of the content on social media profiles administered by Studio Olafur Eliasson GmbH.</p><p>Third Party Cookies<br/>\nThe sharing buttons on this site that allow visitors to share content onto social networks use cookies. The cookies are set by domains external to this website and are required in order to implement these buttons and connect them to the relevant social networks and third party sites. You should be aware that these sites are likely to be collecting information about what you are doing all around the internet, including on this website. You should check the respective policies of each of these sites to see how exactly they use your information and to find out how to opt out, or delete, such information.</p></div></section><section id=\"privacy\" class=\"content-section\"><p class=\"subsection-heading\"><a href=\"http://olafureliasson.net/privacy\" target=\"_blank\" class=\"btn\">Privacy</a></p></section></div></div></div><script src=\"vendor.js\"></script><script src=\"app.js\"></script></head></html>");;return buf.join("");
+buf.push("<!DOCTYPE html><html lang=\"en\"><head><title>" + (jade.escape(null == (jade_interp = 'Ice Watch London') ? "" : jade_interp)) + "</title><meta name=\"description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta name=\"keywords\" content=\"Ice Watch,COP 21,Climate Change,United Nations,Paris,London,Olafur Eliasson,Minik Rosing,Greenland,Ice\"><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\"><meta name=\"twitter:card\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta name=\"twitter:site\"" + (jade.attr("content", '' + (twitterHandle) + '', true, true)) + "><meta name=\"twitter:title\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta name=\"twitter:description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta name=\"twitter:creator\"" + (jade.attr("content", '' + (twitterHandle) + '', true, true)) + "><meta name=\"twitter:image\"" + (jade.attr("content", '' + (image) + '', true, true)) + "><meta property=\"og:title\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta property=\"og:type\" content=\"website\"><meta property=\"og:url\"" + (jade.attr("content", '' + (pageUrl) + '', true, true)) + "><meta property=\"og:image\"" + (jade.attr("content", '' + (image) + '', true, true)) + "><meta property=\"og:description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta property=\"og:site_name\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><link rel=\"icon\" type=\"image/png\" href=\"https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/image/assets/favicon.png\"><link rel=\"stylesheet\" href=\"vendor.css\"><link rel=\"stylesheet\" href=\"app.css\"><script src=\"js/libs/jquery-3.3.1.min.js\"></script><script src=\"js/build/three.js\"></script><script src=\"js/shaders/ShaderTranslucent.js\"></script><script src=\"js/libs/inflate.min.js\"></script><script src=\"js/loaders/FBXLoader.js\"></script><script src=\"js/controls/OrbitControls.js\"></script><script src=\"js/WebGL.js\"></script><script src=\"js/libs/stats.min.js\"></script><!-- script(type='text/javascript' src='js/three_scene.js')--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\nm=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n})(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\nga('create', 'UA-30609807-3', 'auto');\nga('send', 'pageview');</script><div class=\"media-gallery\"></div><div id=\"logo-panel\" data-scrollto=\"content-panel\" class=\"logo-stroke-red scrollto\"></div><div id=\"logo-panel\" data-scrollto=\"content-panel\" class=\"logo-stroke-white bg-red scrollto\"></div><div id=\"content-panel\" class=\"content-toggle\"><ul id=\"navigation\" class=\"columns hide-for-small-only medium-4 large-3 content-toggle hidden\"><li id=\"nav-project-info\"><a href=\"#project-info\" data-scrollto=\"project-info\" class=\"scrollto\">Project Info</a></li><li id=\"nav-climate-facts\"><a href=\"#climate-facts\" data-scrollto=\"climate-facts\" class=\"scrollto\">Climate Facts</a></li><li id=\"nav-resources\"><a href=\"#resources\" data-scrollto=\"resources\" class=\"scrollto\">Resources</a></li><li id=\"nav-history\"><a href=\"#media-gap-3\" data-scrollto=\"media-gap-3\" class=\"scrollto\">History</a></li><li id=\"nav-press\"><a href=\"#press\" data-scrollto=\"press\" class=\"scrollto\">Press</a></li><li id=\"nav-instagram\"><a href=\"https://www.instagram.com/explore/tags/icewatchlondon/\">#IceWatchLondon</a></li><li id=\"nav-social\"><a href=\"http://twitter.com/share?text=Follow the journey of the ice. Ice Watch by @olafureliasson and Minik Rosing;hashtags=icewatchlondon\" class=\"twitter-popup social-button icon-1446658193_twitter_online_social_media\">&#xe800;</a><a href=\"https://www.facebook.com/studioolafureliasson/\" class=\"facebook-popup social-button icon-1446658206_online_social_media_facebook\">&#xe801;</a></li></ul><div class=\"row full-width red\"><div class=\"columns small-12\"><section id=\"intro-text\" class=\"content-section\"><h3 id=\"intro\"></h3></section></div></div><div class=\"row full-width\"><div class=\"columns small-12\"><section id=\"media-gap-1\" class=\"media-gap\"></section></div></div><div class=\"row full-width white-clear\"><div class=\"columns small-12\"><section class=\"quote-text content-section\"><h3 id=\"intro-quote\"></h3></section></div></div><div class=\"row full-width red\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section id=\"project-info\" class=\"content-section\"><p><span id=\"about-info\"> </span></p><br><div><div class=\"columns small-6 medium-6 large-6\"><a href=\"http://bloomberg.org\" style=\"border-bottom: none\" target=\"_blank\"><img src=\"http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/image/assets/bloomberg-logo-white.png\" class=\"partner-logo\"></a></div><div class=\"columns small-6 medium-6 large-6\"><a href=\"http://www.juliesbicycle.com\" style=\"border-bottom: none\" target=\"_blank\"><img src=\"http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchparis/image/assets/julie-logo-white.png\" class=\"partner-logo\"></a></div></div><br><br><br></section></div></div><div class=\"row full-width white\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section id=\"climate-facts\" class=\"content-section\"></section></div></div><div class=\"row full-width\"><div class=\"columns small-12\"><section id=\"media-gap-2\" class=\"media-gap\"></section></div></div><!--.row.full-width.white-clear//.columns.small-12\n\t//section.quote-text.content-section\n\t\t//h3#olafur-quote\n--><div class=\"row full-width red\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section><p><span id=\"resources\"></span></p></section></div></div><div class=\"row full-width\"><div class=\"columns small-12\"><section id=\"media-gap-3\" class=\"media-gap\"></section></div></div><div class=\"row full-width white\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section><br><br><p><span id=\"history\"></span></p></section></div></div><div class=\"row full-width red\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section id=\"press\" class=\"content-section\"><p class=\"subsection-heading\">Press contacts</p><div class=\"press-item-basic-top clearfix\"><div id=\"press-contact-1\"></div></div><div class=\"press-item-basic clearfix\"><div id=\"press-contact-2\"></div></div><div class=\"press-item-basic clearfix\"><div id=\"press-contact-3\"></div></div><div class=\"press-item-basic clearfix\"><div id=\"press-contact-4\"></div></div><div class=\"press-item-basic clearfix\"><div id=\"press-contact-5\"></div></div><br><br><p class=\"subsection-heading\">Social</p><div class=\"press-item-basic-top clearfix\"><div class=\"press-item-basic clearfix\"><div id=\"twitter-list\" class=\"columns\"></div></div><div class=\"press-item-basic clearfix\"><div id=\"instagram-list\" class=\"columns\"></div></div></div><br><p class=\"subsection-heading\">Downloads</p><div id=\"press-items\"></div></section></div></div><div class=\"row full-width red\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section id=\"sources\" class=\"content-section\"><p class=\"subsection-heading\"><span id=\"sources-bt\">Data Sources&nbsp;&nbsp;<span class=\"arrow\">&#8250;</span></span></p><div id=\"sources-content\" class=\"press-item clearfix hidden\"></div></section></div></div><div class=\"row full-width red\"><div class=\"columns small-12 medium-offset-5 medium-7 large-offset-4 large-8\"><section id=\"legal\" class=\"content-section\"><p class=\"subsection-heading\"><span id=\"legal-bt\">Legal&nbsp;&nbsp;<span class=\"arrow\">&#8250;</span></span></p><div class=\"press-item clearfix hidden\"><p>Studio Olafur Eliasson GmbH<br/>\nChristinenstrasse 18/19, Haus 2<br/>\n10119 Berlin</p><p>Director<br/>\nOlafur Eliasson</p><p>Contact<br/>\nstudio@olafureliasson.net<br/>\n+49 30 2000 391 50</p><p>VAT ID: DE 247257125<br/>\nTax No.: 37/415/21533<br/>\nCommercial registry: HRB 99366<br/>\nRegistration office: Amtsgericht Charlottenburg</p><p>The copyright for published objects developed by Studio Olafur Eliasson GmbH itself remains only with Studio Olafur Eliasson GmbH. The use or sharing of such images, audio features, video sequences, and texts in other electronic or printed publications is permitted for all non-commercial purposes.</p><p>Studio Olafur Eliasson GmbH explicitly reserves the right to alter, supplement, or delete parts or the whole of the website's content, or to temporarily or completely discontinue publication without further notice.</p><p>Studio Olafur Eliasson GmbH has no influence whatsoever on content offered through direct or indirect links to other web providers and pages and does not endorse any of this content – with the exception of the content on social media profiles administered by Studio Olafur Eliasson GmbH.</p><p>Third Party Cookies<br/>\nThe sharing buttons on this site that allow visitors to share content onto social networks use cookies. The cookies are set by domains external to this website and are required in order to implement these buttons and connect them to the relevant social networks and third party sites. You should be aware that these sites are likely to be collecting information about what you are doing all around the internet, including on this website. You should check the respective policies of each of these sites to see how exactly they use your information and to find out how to opt out, or delete, such information.</p></div></section><section id=\"privacy\" class=\"content-section\"><p class=\"subsection-heading\"><a href=\"http://olafureliasson.net/privacy\" target=\"_blank\" class=\"btn\">Privacy</a></p></section></div></div></div><script src=\"vendor.js\"></script><script src=\"app.js\"></script></head></html>");;return buf.join("");
 };
 if (typeof define === 'function' && define.amd) {
   define([], function() {
@@ -280,11 +280,29 @@ var at_callbacks = [];
 var at_data_requested = false;
 bg_key = ''
 var backgrounds = {}
+var londonWeatherData = null;
+var dataConsole = null;
 window.backgrounds = backgrounds
 
 var climateWaypoints = []
 
+var weatherApiKey = '705a22e689f9613a9a709ac814037ea0'
+
+// THREE VARS
+var container, stats;
+var camera, scene, outscene, renderer;
+var morph, small, large, og_morph;
+var mixers;
+var clock = new THREE.Clock();
+var mouse = new THREE.Vector2(), INTERSECTED;
+var uniforms;
+var iceMeltState = 0.05; // 1 = melted (no ice)
+
 $(document).ready(function(){
+
+    if ( WEBGL.isWebGLAvailable() === false ) {
+        document.body.appendChild( WEBGL.getWebGLErrorMessage() );
+    }
 
     getAirtableData(() => {
       if (Object.keys(backgrounds).length == 0) {
@@ -462,7 +480,10 @@ $(document).ready(function(){
 	// Fade in
 
 	$('.logo-stroke-white').delay(3000).fadeTo(5000, 0);
-    Waypoint.refreshAll()
+  Waypoint.refreshAll()
+
+  // SETUP THREE
+  trying_to_setup = setInterval( attach_if_ready , 1000)
 });
 
 function getAirtableData(callback) {
@@ -888,10 +909,10 @@ function initSlideshow(gallerySelector, slideshowName, aspectRatio, shouldShowCo
 	var url = window.location.href + 'partials/' + slideshowName + '.html';
 	(function(gallerySelector, slideshowName, aspectRatio, shouldShowControls, callback) {
         hideThree()
-        //var displayThree = true;
-        var displayThree = false;
+        var showThree = true;
+        //var showThree = false;
 
-        if (slideshowName == 'slideshow1' && displayThree) {
+        if (slideshowName == 'slideshow1' && showThree) {
           displayThree(gallerySelector)
         } else if ('slideshowIntro' == slideshowName) {
           $(gallerySelector).load(url, function() {
@@ -1425,6 +1446,332 @@ window.mobileAndTabletcheck = function() {
   var check = false;
   (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
   return check;
+}
+
+// THREE FUNCS
+function attach_if_ready() {
+  container = $('.three-frame')
+  // container will either not exist 
+  // OR will already have the three scene set up in it
+  if (container[0]){
+    init();
+    setupDataConsole()
+    clearInterval(trying_to_setup)
+  }
+}
+
+function setIceData () {
+  if (londonWeatherData) {
+    var start_utc = 1544377035041
+    var today = londonWeatherData.list[0]
+    var current_temp = Math.round((parseInt(today.main.temp) - 273.15) * 100) / 100
+    var n_melt_days = 42
+    var total_mass = 110000
+    var days_elapsed = (Date.now() - start_utc) / 86400000
+    var melt_rate = Math.round(total_mass/n_melt_days*100)/100;
+    var current_mass = Math.round((total_mass - melt_rate * days_elapsed) * 100) / 100
+    iceMeltState = 1 - current_mass / total_mass
+
+    var dataHTML = at_html_data['ice-data']
+    dataHTML = dataHTML.replace('<<MELT_RATE>>', melt_rate)
+    dataHTML = dataHTML.replace('<<TEMP>>', current_temp)
+    dataHTML = dataHTML.replace('<<CURRENT_MASS>>', current_mass)
+
+    dataConsole.html(dataHTML)
+  }
+}
+
+function setupDataConsole() {
+  dataConsole = $('<div>')
+  
+  dataConsole.attr('id','data-console')
+  $('.three-frame').append(dataConsole)
+  dataConsole.css({
+    fontFamily: 'monospace',
+    position: 'fixed',
+    top: window.innerHeight*.2,
+    right: 150,
+    fontSize: 20,
+    color: 'white',
+    zIndex: 1
+  })
+
+  var weatherAPIUrl = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=705a22e689f9613a9a709ac814037ea0'
+
+  $.get(weatherAPIUrl, (data) => {
+    londonWeatherData = data
+    setIceData()
+  })
+
+  
+}
+
+function init() {
+  clock.start()
+  mixers = [];
+
+  // Interactive Ref
+  // https://github.com/mrdoob/three.js/blob/master/examples/webgl_interactive_cubes.html
+  document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+  container = document.createElement( 'div' );
+  document.body.appendChild( container );
+
+  camera = new THREE.OrthographicCamera( window.innerWidth / -2, window.innerWidth / 2,  window.innerHeight/2, window.innerHeight/-2, 1, 10000 );
+  // camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 5000 );
+  camera.position.set( 0.0, 300, 400 * 4 );
+
+  scene = new THREE.Scene();
+  outscene = new THREE.Scene();
+
+  // Lights
+
+  scene.add( new THREE.AmbientLight( 0x888888 ) );
+
+  var directionalLight = new THREE.DirectionalLight( 0xddeeff, 0.2 );
+  directionalLight.position.set( 0.0, 0.5, 0.5 ).normalize();
+  scene.add( directionalLight );
+
+  var pointLight1 = new THREE.Mesh( new THREE.SphereBufferGeometry( 1, 1, 1 ), new THREE.MeshBasicMaterial( { color: 0x888888 } ) );
+  pointLight1.add( new THREE.PointLight( 0x8888dd, 1.0, 300 ) );
+  //scene.add( pointLight1 );
+  pointLight1.position.x = 0;
+  pointLight1.position.y =  250;
+  pointLight1.position.z = 350;
+
+  var pointLight2 = new THREE.Mesh( new THREE.SphereBufferGeometry( 1, 1, 1 ), new THREE.MeshBasicMaterial( { color: 0x888888 } ) );
+  pointLight2.add( new THREE.PointLight( 0x888888, 1.0, 500 ) );
+  //scene.add( pointLight2 );
+  pointLight2.position.x = - 100;
+  pointLight2.position.y = 220;
+  pointLight2.position.z = - 260;
+
+  // BACKGRUND
+  var geometry = new THREE.SphereGeometry( 2000, 10, 100 );
+  var material = new THREE.MeshBasicMaterial( {color: 0x555555, side: THREE.DoubleSide} );
+  var mesh = new THREE.Mesh( geometry, material );
+  scene.add( mesh );
+
+  renderer = new THREE.WebGLRenderer( { antialias: true } );
+  renderer.setPixelRatio( window.devicePixelRatio );
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  
+  $('.three-frame').empty()
+  $('.three-frame')[0].appendChild( renderer.domElement );
+
+  renderer.gammaInput = true;
+  renderer.gammaOutput = true;
+
+  //stats = new Stats();
+  //container.appendChild( stats.dom );
+
+  var controls = new THREE.OrbitControls( camera, container );
+
+  window.addEventListener( 'resize', onWindowResize, false );
+
+  initMorph();
+}
+
+function initText() {
+  
+}
+
+function initMorph() {
+
+  var loader = new THREE.TextureLoader();
+  var imgTexture = loader.load( 'models/fbx/white.jpg' );
+  var thicknessTexture = loader.load( 'models/fbx/white.jpg' );
+  imgTexture.wrapS = imgTexture.wrapT = THREE.RepeatWrapping;
+
+  var shader = new TranslucentShader();
+  uniforms = THREE.UniformsUtils.clone( shader.uniforms );
+
+  uniforms[ 'map' ].value = imgTexture;
+  uniforms[ 'diffuse' ].value = new THREE.Vector3( .8, 0.8, 0.8 );
+  uniforms[ 'shininess' ].value = 500;
+  uniforms[ 'thicknessMap' ].value = thicknessTexture;
+  uniforms[ 'thicknessColor' ].value = new THREE.Vector3( 0.2, 0.24, 0.3 );
+  uniforms[ 'thicknessDistortion' ].value = 0.1;
+  uniforms[ 'thicknessAmbient' ].value = 1;
+  uniforms[ 'thicknessAttenuation' ].value = 4.3;
+  uniforms[ 'thicknessPower' ].value = 10.0;
+  uniforms[ 'thicknessScale' ].value = 1.0;
+
+  var material = new THREE.ShaderMaterial( {
+      uniforms: uniforms,
+      vertexShader: shader.vertexShader,
+      fragmentShader: shader.fragmentShader,
+      lights: true
+  } );
+  material.transparent = true;
+  material.extensions.derivatives = true;
+
+  // OUTLINE
+  let vxs =`
+    uniform float offset;
+    void main() {
+      vec4 pos = modelViewMatrix * vec4( position + normal * offset, 1.0 );
+      gl_Position = projectionMatrix * pos;
+    }
+    `
+
+    let fgs =`
+    void main(){
+      gl_FragColor = vec4( 0.5, 0.5, 0.5, 0.1 );
+    }
+    `
+    let outlineUniforms = {
+      offset: {
+        type: 'f',
+        value: 1
+      }
+    };
+
+    let outlineMat = new THREE.ShaderMaterial({
+      //side: THREE.BackSide,
+      uniforms: outlineUniforms,
+      vertexShader: vxs,
+      fragmentShader: fgs
+    });
+    var outlineMat2 = new THREE.MeshBasicMaterial( { color: 0x00ff00, side: THREE.BackSide } );
+
+  // LOADER
+  var loader = new THREE.FBXLoader();
+  loader.load( 'models/fbx/babybeige.fbx', function ( object ) {
+      object.traverse( function ( child ) {
+          if ( child.isMesh ) {
+            if ( child.name =='2') {
+              small = child
+              small.scale.set(1.5,1.5,1.5)
+            }
+            else if ( child.name =='1') {
+              large = child
+              large.scale.set(1.5,1.5, 1.5)
+            }
+          }
+      } );
+
+      // Build Morph Mesh
+      morph = large.clone()
+      morph.geometry = large.geometry.clone()
+      morph.material = material
+      window.morph = morph
+      morph.castShadow = true;
+      morph.receiveShadow = true;
+
+      
+      og_morph = large.clone()
+      og_morph.children=[]
+      //og_morph = new THREE.Mesh(large.geometry.clone(), outlineMat)
+      og_morph.position.set(0, 0, -10);
+      og_morph.material = outlineMat
+      og_morph.material.depthWrite = false;
+      scene.add(og_morph)
+
+      morph.children = []
+      scene.add( morph );
+      animate()
+  } );
+
+  //initGUI( uniforms );
+}
+
+function setMorphVertices(morph, meshA, meshB, ratio) {
+// All inputs are buffer meshes
+morph.geometry.attributes.position.needsUpdate = true
+var vertsM = morph.geometry.attributes.position.array
+var vertsA = meshA.geometry.attributes.position.array
+var vertsB = meshB.geometry.attributes.position.array
+var e = .0001
+for ( var i=0; i < vertsM.length ; i++) {
+  vertsM[i] = vertsA[i]*(ratio+e) + vertsB[i]*(1-ratio+e)
+}
+}
+
+function initGUI( uniforms ) {
+
+  var gui = new dat.GUI();
+
+  var ThicknessControls = function () {
+
+      this.distoration = uniforms[ 'thicknessDistortion' ].value;
+      this.ambient = uniforms[ 'thicknessAmbient' ].value;
+      this.attenuation = uniforms[ 'thicknessAttenuation' ].value;
+      this.power = uniforms[ 'thicknessPower' ].value;
+      this.scale = uniforms[ 'thicknessScale' ].value;
+
+  };
+
+  var thicknessControls = new ThicknessControls();
+  var thicknessFolder = gui.addFolder( 'Thickness Control' );
+
+  thicknessFolder.add( thicknessControls, 'distoration' ).min( 0.01 ).max( 1 ).step( 0.01 ).onChange( function () {
+
+      uniforms[ 'thicknessDistortion' ].value = thicknessControls.distoration;
+
+  } );
+
+  thicknessFolder.add( thicknessControls, 'ambient' ).min( 0.01 ).max( 5.0 ).step( 0.05 ).onChange( function () {
+
+      uniforms[ 'thicknessAmbient' ].value = thicknessControls.ambient;
+
+  } );
+
+  thicknessFolder.add( thicknessControls, 'attenuation' ).min( 0.01 ).max( 5.0 ).step( 0.05 ).onChange( function () {
+
+      uniforms[ 'thicknessAttenuation' ].value = thicknessControls.attenuation;
+
+  } );
+
+  thicknessFolder.add( thicknessControls, 'power' ).min( 0.01 ).max( 16.0 ).step( 0.1 ).onChange( function () {
+
+      uniforms[ 'thicknessPower' ].value = thicknessControls.power;
+
+  } );
+
+  thicknessFolder.add( thicknessControls, 'scale' ).min( 0.01 ).max( 50.0 ).step( 0.1 ).onChange( function () {
+
+      uniforms[ 'thicknessScale' ].value = thicknessControls.scale;
+
+  } );
+
+  thicknessFolder.open();
+
+}
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+}
+
+function onDocumentMouseMove( event ) {
+  event.preventDefault();
+  mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+  mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+}
+
+function animate() {
+  
+  requestAnimationFrame( animate );
+  if (bg_key == 'three') {
+    //var r = Math.sin( clock.getElapsedTime() )
+    var r = iceMeltState
+    morph.lookAt( new THREE.Vector3( mouse.x*window.innerWidth*10, mouse.y*innerHeight*10, -10000))
+    og_morph.lookAt( new THREE.Vector3( mouse.x*window.innerWidth*10, mouse.y*innerHeight*10, -10000))
+    setMorphVertices(morph, small, large, r)
+    //stats.update();
+    render();
+
+    setIceData()
+  }
+}
+
+function render() {
+
+  renderer.render( outscene, camera );
+  renderer.render( scene, camera );
+
 }
 
 ;(function (global, factory) {
@@ -58318,7 +58665,7 @@ var description = 'A project by Olafur Eliasson and Minik Rosing, on the occasio
 var pageUrl = 'http://icewatchlondon.com'
 var image = 'https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/image/assets/thumbnail.jpg'
 var twitterHandle = '@olafureliasson'
-buf.push("<!DOCTYPE html><html lang=\"en\"><head><title>" + (jade.escape(null == (jade_interp = 'Ice Watch London') ? "" : jade_interp)) + "</title><meta name=\"description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta name=\"keywords\" content=\"Ice Watch,COP 21,Climate Change,United Nations,Paris,London,Olafur Eliasson,Minik Rosing,Greenland,Ice\"><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\"><meta name=\"twitter:card\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta name=\"twitter:site\"" + (jade.attr("content", '' + (twitterHandle) + '', true, true)) + "><meta name=\"twitter:title\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta name=\"twitter:description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta name=\"twitter:creator\"" + (jade.attr("content", '' + (twitterHandle) + '', true, true)) + "><meta name=\"twitter:image\"" + (jade.attr("content", '' + (image) + '', true, true)) + "><meta property=\"og:title\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta property=\"og:type\" content=\"website\"><meta property=\"og:url\"" + (jade.attr("content", '' + (pageUrl) + '', true, true)) + "><meta property=\"og:image\"" + (jade.attr("content", '' + (image) + '', true, true)) + "><meta property=\"og:description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta property=\"og:site_name\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><link rel=\"icon\" type=\"image/png\" href=\"https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/image/assets/favicon.png\"><link rel=\"stylesheet\" href=\"vendor.css\"><link rel=\"stylesheet\" href=\"app.css\"><script src=\"js/libs/jquery-3.3.1.min.js\"></script><script src=\"js/build/three.js\"></script><script src=\"js/shaders/ShaderTranslucent.js\"></script><script src=\"js/libs/inflate.min.js\"></script><script src=\"js/loaders/FBXLoader.js\"></script><script src=\"js/controls/OrbitControls.js\"></script><script src=\"js/WebGL.js\"></script><script src=\"js/libs/stats.min.js\"></script><script type=\"text/javascript\" src=\"js/three_scene.js\"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\nm=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n})(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\nga('create', 'UA-30609807-3', 'auto');\nga('send', 'pageview');</script></head></html>");;return buf.join("");
+buf.push("<!DOCTYPE html><html lang=\"en\"><head><title>" + (jade.escape(null == (jade_interp = 'Ice Watch London') ? "" : jade_interp)) + "</title><meta name=\"description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta name=\"keywords\" content=\"Ice Watch,COP 21,Climate Change,United Nations,Paris,London,Olafur Eliasson,Minik Rosing,Greenland,Ice\"><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\"><meta name=\"twitter:card\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta name=\"twitter:site\"" + (jade.attr("content", '' + (twitterHandle) + '', true, true)) + "><meta name=\"twitter:title\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta name=\"twitter:description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta name=\"twitter:creator\"" + (jade.attr("content", '' + (twitterHandle) + '', true, true)) + "><meta name=\"twitter:image\"" + (jade.attr("content", '' + (image) + '', true, true)) + "><meta property=\"og:title\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><meta property=\"og:type\" content=\"website\"><meta property=\"og:url\"" + (jade.attr("content", '' + (pageUrl) + '', true, true)) + "><meta property=\"og:image\"" + (jade.attr("content", '' + (image) + '', true, true)) + "><meta property=\"og:description\"" + (jade.attr("content", '' + (description) + '', true, true)) + "><meta property=\"og:site_name\"" + (jade.attr("content", '' + (title) + '', true, true)) + "><link rel=\"icon\" type=\"image/png\" href=\"https://s3-eu-west-1.amazonaws.com/olafureliasson.net/subpages/icewatchparis/image/assets/favicon.png\"><link rel=\"stylesheet\" href=\"vendor.css\"><link rel=\"stylesheet\" href=\"app.css\"><script src=\"js/libs/jquery-3.3.1.min.js\"></script><script src=\"js/build/three.js\"></script><script src=\"js/shaders/ShaderTranslucent.js\"></script><script src=\"js/libs/inflate.min.js\"></script><script src=\"js/loaders/FBXLoader.js\"></script><script src=\"js/controls/OrbitControls.js\"></script><script src=\"js/WebGL.js\"></script><script src=\"js/libs/stats.min.js\"></script><!-- script(type='text/javascript' src='js/three_scene.js')--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\nm=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n})(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\nga('create', 'UA-30609807-3', 'auto');\nga('send', 'pageview');</script></head></html>");;return buf.join("");
 };
 if (typeof define === 'function' && define.amd) {
   define([], function() {
