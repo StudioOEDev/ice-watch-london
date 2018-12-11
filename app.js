@@ -428,10 +428,11 @@ $(document).ready(function(){
 
 	// Init bg intro video
 	if(isMobile) {
+    $('#media-gap-0').hide()
 		$('.media-gallery').replaceWith('<div class="mobile-intro-bg"></div>');
-    initSlideshow('.media-gap:eq(0)', 'slideshow1', aspectRatio, true) // call the next two as callbacks?
-    initSlideshow('.media-gap:eq(1)', 'slideshow2', aspectRatio, true);
-    initSlideshow('.media-gap:eq(2)', 'slideshow3', aspectRatio, true);
+    initSlideshow('#media-gap-1', 'slideshow1', aspectRatio, true) // call the next two as callbacks?
+    initSlideshow('#media-gap-2', 'slideshow2', aspectRatio, true);
+    initSlideshow('#media-gap-3', 'slideshow3', aspectRatio, true);
 	} else {
 		initSlideshow('.media-gallery', 'slideshowIntro', aspectRatio, false);
         playSlideshow('.media-gallery');
