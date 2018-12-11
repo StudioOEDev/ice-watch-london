@@ -7447,11 +7447,14 @@ a.social-button {
   position: absolute;
   width: 100%;
   text-align: right;
-  right: 100px;
+  right: 10%;
   bottom: 30px;
   font-size: .85rem;
   color: white;
   z-index: 20 !important; }
+
+#data-console {
+  color: #be1e20; }
 
 #sources {
   margin: 0px; }
