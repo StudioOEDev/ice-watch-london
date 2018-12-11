@@ -924,7 +924,6 @@ function initSlideshow(gallerySelector, slideshowName, aspectRatio, shouldShowCo
 	var url = window.location.href + 'partials/' + slideshowName + '.html';
 	(function(gallerySelector, slideshowName, aspectRatio, shouldShowControls, callback) {
         hideThree()
-
         if (true && !isMobile && slideshowName == 'slideshow1') {
           displayThree(gallerySelector)
           if (callback) callback()
@@ -933,7 +932,7 @@ function initSlideshow(gallerySelector, slideshowName, aspectRatio, shouldShowCo
             setupSlideshow(gallerySelector, slideshowName, aspectRatio, shouldShowControls, callback)
           });
         } else if (!isMobile && slideshowName == 'slideshow2') {
-          initClimateVis(gallerySelector)
+          getAirtableData( () => { initClimateVis(gallerySelector); if (callback) callback() })
           if (callback) callback()
         } else if (isMobile && slideshowName == 'slideshow2') {
           getAirtableData( () => { initClimateVisMobile(gallerySelector); if (callback) callback() })
