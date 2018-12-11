@@ -7075,7 +7075,7 @@ body {
   top: 1.5em;
   left: 1.5em;
   list-style: none;
-  z-index: 9999;
+  z-index: 99999;
   margin: 0;
   padding: 0;
   color: white;
