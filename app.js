@@ -1466,8 +1466,9 @@ function attach_if_ready() {
 function setIceData () {
   if (londonWeatherData) {
     var start_utc = 1544377035041
-    var today = londonWeatherData.list[0]
-    var current_temp = Math.round((parseInt(today.main.temp) - 273.15) * 100) / 100
+    var today = londonWeatherData
+    console.log(today.main.temp)
+    var current_temp = Math.round((parseFloat(today.main.temp) - 273.15) * 100) / 100
     var n_melt_days = 60
     var total_mass = 110000
     var days_elapsed = (Date.now() - start_utc) / 86400000
@@ -1502,7 +1503,7 @@ function setupDataConsole() {
     zIndex: 1
   })
 
-  var weatherAPIUrl = 'https://api.openweathermap.org/data/2.5/forecast?id=2643743&APPID=705a22e689f9613a9a709ac814037ea0'
+  var weatherAPIUrl = 'https://api.openweathermap.org/data/2.5/weather?id=2643743&APPID=705a22e689f9613a9a709ac814037ea0'
 
   $.get(weatherAPIUrl, (data) => {
     londonWeatherData = data
