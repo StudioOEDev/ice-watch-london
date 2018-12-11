@@ -7094,63 +7094,62 @@ body {
     #navigation.red a:hover {
       border-color: #be1e20; }
 
-#content-panel {
+.content-panel {
   position: relative;
   width: 100vw;
-  margin-top: 100vh;
   z-index: 9999;
   pointer-events: none; }
-  #content-panel * {
+  .content-panel * {
     pointer-events: auto; }
-  #content-panel.active {
+  .content-panel.active {
     opacity: 1;
     left: 0; }
-  #content-panel .content-section {
+  .content-panel .content-section {
     margin: 10vh 0; }
-  #content-panel .row.red {
+  .content-panel .row.red {
     background: #be1e20;
     color: white; }
-    #content-panel .row.red a, #content-panel .row.red a:active, #content-panel .row.red a:visited {
+    .content-panel .row.red a, .content-panel .row.red a:active, .content-panel .row.red a:visited {
       color: white;
       border-bottom: 4px solid white;
       opacity: 1; }
-      #content-panel .row.red a:hover, #content-panel .row.red a:active:hover, #content-panel .row.red a:visited:hover {
+      .content-panel .row.red a:hover, .content-panel .row.red a:active:hover, .content-panel .row.red a:visited:hover {
         color: white;
         opacity: 0.8; }
-  #content-panel .row.white {
+  .content-panel .row.white {
     background: white;
     color: #be1e20; }
-    #content-panel .row.white a, #content-panel .row.white a:active, #content-panel .row.white a:visited {
+    .content-panel .row.white a, .content-panel .row.white a:active, .content-panel .row.white a:visited {
       color: #be1e20;
       border-bottom: 4px solid #be1e20;
       opacity: 1; }
-      #content-panel .row.white a:hover, #content-panel .row.white a:active:hover, #content-panel .row.white a:visited:hover {
+      .content-panel .row.white a:hover, .content-panel .row.white a:active:hover, .content-panel .row.white a:visited:hover {
         color: #be1e20;
         opacity: 0.8; }
-  #content-panel .row.white-clear {
+  .content-panel .row.white-clear {
     background: rgba(255, 255, 255, 0.8);
     color: #be1e20; }
-    #content-panel .row.white-clear a, #content-panel .row.white-clear a:active, #content-panel .row.white-clear a:visited {
+    .content-panel .row.white-clear a, .content-panel .row.white-clear a:active, .content-panel .row.white-clear a:visited {
       color: #be1e20;
       border-bottom: 4px solid #be1e20;
       opacity: 1; }
-      #content-panel .row.white-clear a:hover, #content-panel .row.white-clear a:active:hover, #content-panel .row.white-clear a:visited:hover {
+      .content-panel .row.white-clear a:hover, .content-panel .row.white-clear a:active:hover, .content-panel .row.white-clear a:visited:hover {
         color: #be1e20;
         opacity: 0.8; }
-    #content-panel .row.white-clear h3 {
+    .content-panel .row.white-clear h3 {
       color: #be1e20;
       position: relative;
       top: 0;
       left: 0;
       z-index: 10000; }
-  #content-panel .row.red-clear {
+  .content-panel .row.red-clear {
     background: rgba(190, 30, 32, 0.8);
     color: white; }
-    #content-panel .row.red-clear a, #content-panel .row.red-clear a:active, #content-panel .row.red-clear a:visited {
+    .content-panel .row.red-clear a, .content-panel .row.red-clear a:active, .content-panel .row.red-clear a:visited {
       color: #be1e20;
       border-bottom: 4px solid #be1e20;
       opacity: 1; }
-      #content-panel .row.red-clear a:hover, #content-panel .row.red-clear a:active:hover, #content-panel .row.red-clear a:visited:hover {
+      .content-panel .row.red-clear a:hover, .content-panel .row.red-clear a:active:hover, .content-panel .row.red-clear a:visited:hover {
         color: #be1e20;
         opacity: 0.8; }
 
@@ -7455,6 +7454,9 @@ a.social-button {
 
 #data-console {
   color: #be1e20; }
+
+#slidshow-inline {
+  width: 50vw; }
 
 #sources {
   margin: 0px; }
