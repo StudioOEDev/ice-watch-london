@@ -1,0 +1,16 @@
+<div class="climate-title-wrapper"><div class="climate-title">TITLE</div></div>
+<img id="climate-graph-1" class="climate-graph" src="<<SRC-G1>>"></img>
+<img id="climate-graph-2" class="climate-graph" src="<<SRC-G2>>"></img>
+<img id="climate-graph-3" class="climate-graph" src="<<SRC-G3>>"></img>
+<video id="climate-video-1" class="climate-video" src="<<SRC-1>>" muted loop></video>
+<video id="climate-video-2" class="climate-video" src="<<SRC-2>>" muted loop></video>
+<video id="climate-video-3" class="climate-video" src="<<SRC-3>>" muted loop></video>
+<div id="climate-info-slide-1" class="climate-info-slide">INFO</div>
+<div class="climate-button-panel">
+  <div class="climate-slider"></div>
+  <img id="climate-button-1" class="climate-button" src="http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchlondon/image/Icons/SVG/Ice-Watch-icons-04.svg"></img>
+  <img id="climate-button-2" class="climate-button" src="http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchlondon/image/Icons/SVG/Ice-Watch-icons-05.svg"></img>
+  <img id="climate-button-3" class="climate-button" src="http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchlondon/image/Icons/SVG/Ice-Watch-icons-01.svg"></img>
+  <img id="climate-button-4" class="climate-button" src="http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchlondon/image/Icons/SVG/Ice-Watch-icons-03.svg"></img>
+  <img id="climate-button-5" class="climate-button" src="http://olafureliasson.net.s3.amazonaws.com/subpages/icewatchlondon/image/Icons/SVG/Ice-Watch-icons-02.svg"></img>
+</div>

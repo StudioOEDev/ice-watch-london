@@ -1,0 +1,2148 @@
+/*!
+Video.js Default Styles (http://videojs.com)
+Version 4.12.15
+Create your own skin at http://designer.videojs.com
+*/
+/* SKIN
+================================================================================
+The main class name for all skin-specific styles. To make your own skin,
+replace all occurrences of 'vjs-default-skin' with a new name. Then add your new
+skin name to your video tag instead of the default skin.
+e.g. <video class="video-js my-skin-name">
+*/
+.vjs-default-skin {
+  color: #cccccc;
+}
+/* Custom Icon Font
+--------------------------------------------------------------------------------
+The control icons are from a custom font. Each icon corresponds to a character
+(e.g. "\e001"). Font icons allow for easy scaling and coloring of icons.
+*/
+@font-face {
+  font-family: 'VideoJS';
+  src: url('font/vjs.eot');
+  src: url('font/vjs.eot?#iefix') format('embedded-opentype'), url('font/vjs.woff') format('woff'), url('font/vjs.ttf') format('truetype'), url('font/vjs.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Base UI Component Classes
+--------------------------------------------------------------------------------
+*/
+/* Slider - used for Volume bar and Seek bar */
+.vjs-default-skin .vjs-slider {
+  /* Replace browser focus highlight with handle highlight */
+  outline: 0;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  /* background-color-with-alpha */
+  background-color: #333333;
+  background-color: rgba(51, 51, 51, 0.9);
+}
+.vjs-default-skin .vjs-slider:focus {
+  /* box-shadow */
+  -webkit-box-shadow: 0 0 2em #ffffff;
+  -moz-box-shadow: 0 0 2em #ffffff;
+  box-shadow: 0 0 2em #ffffff;
+}
+.vjs-default-skin .vjs-slider-handle {
+  position: absolute;
+  /* Needed for IE6 */
+  left: 0;
+  top: 0;
+}
+.vjs-default-skin .vjs-slider-handle:before {
+  content: "\e009";
+  font-family: VideoJS;
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0em 0em 1em #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Rotate the square icon to make a diamond */
+  /* transform */
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* Control Bar
+--------------------------------------------------------------------------------
+The default control bar that is a container for most of the controls.
+*/
+.vjs-default-skin .vjs-control-bar {
+  /* Start hidden */
+  display: none;
+  position: absolute;
+  /* Place control bar at the bottom of the player box/video.
+     If you want more margin below the control bar, add more height. */
+  bottom: 0;
+  /* Use left/right to stretch to 100% width of player div */
+  left: 0;
+  right: 0;
+  /* Height includes any margin you want above or below control items */
+  height: 3.0em;
+  /* background-color-with-alpha */
+  background-color: #07141e;
+  background-color: rgba(7, 20, 30, 0.7);
+}
+/* Show the control bar only once the video has started playing */
+.vjs-default-skin.vjs-has-started .vjs-control-bar {
+  display: block;
+  /* Visibility needed to make sure things hide in older browsers too. */
+
+  visibility: visible;
+  opacity: 1;
+  /* transition */
+  -webkit-transition: visibility 0.1s, opacity 0.1s;
+  -moz-transition: visibility 0.1s, opacity 0.1s;
+  -o-transition: visibility 0.1s, opacity 0.1s;
+  transition: visibility 0.1s, opacity 0.1s;
+}
+/* Hide the control bar when the video is playing and the user is inactive  */
+.vjs-default-skin.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  /* transition */
+  -webkit-transition: visibility 1s, opacity 1s;
+  -moz-transition: visibility 1s, opacity 1s;
+  -o-transition: visibility 1s, opacity 1s;
+  transition: visibility 1s, opacity 1s;
+}
+.vjs-default-skin.vjs-controls-disabled .vjs-control-bar {
+  display: none;
+}
+.vjs-default-skin.vjs-using-native-controls .vjs-control-bar {
+  display: none;
+}
+/* The control bar shouldn't show after an error */
+.vjs-default-skin.vjs-error .vjs-control-bar {
+  display: none;
+}
+/* Don't hide the control bar if it's audio */
+.vjs-audio.vjs-default-skin.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+  opacity: 1;
+  visibility: visible;
+}
+/* IE8 is flakey with fonts, and you have to change the actual content to force
+fonts to show/hide properly.
+  - "\9" IE8 hack didn't work for this
+  - Found in XP IE8 from http://modern.ie. Does not show up in "IE8 mode" in IE9
+*/
+@media \0screen {
+  .vjs-default-skin.vjs-user-inactive.vjs-playing .vjs-control-bar :before {
+    content: "";
+  }
+}
+/* General styles for individual controls. */
+.vjs-default-skin .vjs-control {
+  outline: none;
+  position: relative;
+  float: left;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 3.0em;
+  width: 4em;
+}
+/* Font button icons */
+.vjs-default-skin .vjs-control:before {
+  font-family: VideoJS;
+  font-size: 1.5em;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+/* Replacement for focus outline */
+.vjs-default-skin .vjs-control:focus:before,
+.vjs-default-skin .vjs-control:hover:before {
+  text-shadow: 0em 0em 1em #ffffff;
+}
+.vjs-default-skin .vjs-control:focus {
+  /*  outline: 0; */
+  /* keyboard-only users cannot see the focus on several of the UI elements when
+  this is set to 0 */
+
+}
+/* Hide control text visually, but have it available for screenreaders */
+.vjs-default-skin .vjs-control-text {
+  /* hide-visually */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Play/Pause
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-play-control {
+  width: 5em;
+  cursor: pointer;
+}
+.vjs-default-skin .vjs-play-control:before {
+  content: "\e001";
+}
+.vjs-default-skin.vjs-playing .vjs-play-control:before {
+  content: "\e002";
+}
+/* Playback toggle
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-playback-rate .vjs-playback-rate-value {
+  font-size: 1.5em;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.vjs-default-skin .vjs-playback-rate.vjs-menu-button .vjs-menu .vjs-menu-content {
+  width: 4em;
+  left: -2em;
+  list-style: none;
+}
+/* Volume/Mute
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-mute-control,
+.vjs-default-skin .vjs-volume-menu-button {
+  cursor: pointer;
+  float: right;
+}
+.vjs-default-skin .vjs-mute-control:before,
+.vjs-default-skin .vjs-volume-menu-button:before {
+  content: "\e006";
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-0:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-0:before {
+  content: "\e003";
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-1:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-1:before {
+  content: "\e004";
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-2:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-2:before {
+  content: "\e005";
+}
+.vjs-default-skin .vjs-volume-control {
+  width: 5em;
+  float: right;
+}
+.vjs-default-skin .vjs-volume-bar {
+  width: 5em;
+  height: 0.6em;
+  margin: 1.1em auto 0;
+}
+.vjs-default-skin .vjs-volume-level {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.5em;
+  /* assuming volume starts at 1.0 */
+
+  width: 100%;
+  background: #66a8cc url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC) -50% 0 repeat;
+}
+.vjs-default-skin .vjs-volume-bar .vjs-volume-handle {
+  width: 0.5em;
+  height: 0.5em;
+  /* Assumes volume starts at 1.0. If you change the size of the
+     handle relative to the volume bar, you'll need to update this value
+     too. */
+
+  left: 4.5em;
+}
+.vjs-default-skin .vjs-volume-handle:before {
+  font-size: 0.9em;
+  top: -0.2em;
+  left: -0.2em;
+  width: 1em;
+  height: 1em;
+}
+/* The volume menu button is like menu buttons (captions/subtitles) but works
+    a little differently. It needs to be possible to tab to the volume slider
+    without hitting space bar on the menu button. To do this we're not using
+    display:none to hide the slider menu by default, and instead setting the
+    width and height to zero. */
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top-color: transparent;
+}
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu .vjs-menu-content {
+  height: 0;
+  width: 0;
+}
+.vjs-default-skin .vjs-volume-menu-button:hover .vjs-menu,
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu.vjs-lock-showing {
+  border-top-color: rgba(7, 40, 50, 0.5);
+  /* Same as ul background */
+
+}
+.vjs-default-skin .vjs-volume-menu-button:hover .vjs-menu .vjs-menu-content,
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu.vjs-lock-showing .vjs-menu-content {
+  height: 2.9em;
+  width: 10em;
+}
+/* Progress
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-progress-control {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto;
+  font-size: 0.3em;
+  height: 1em;
+  /* Set above the rest of the controls. */
+  top: -1em;
+  /* Shrink the bar slower than it grows. */
+  /* transition */
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* On hover, make the progress bar grow to something that's more clickable.
+    This simply changes the overall font for the progress bar, and this
+    updates both the em-based widths and heights, as wells as the icon font */
+.vjs-default-skin:hover .vjs-progress-control {
+  font-size: .9em;
+  /* Even though we're not changing the top/height, we need to include them in
+      the transition so they're handled correctly. */
+
+  /* transition */
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/* Box containing play and load progresses. Also acts as seek scrubber. */
+.vjs-default-skin .vjs-progress-holder {
+  height: 100%;
+}
+/* Progress Bars */
+.vjs-default-skin .vjs-progress-holder .vjs-play-progress,
+.vjs-default-skin .vjs-progress-holder .vjs-load-progress,
+.vjs-default-skin .vjs-progress-holder .vjs-load-progress div {
+  position: absolute;
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* updated by javascript during playback */
+
+  width: 0;
+  /* Needed for IE6 */
+  left: 0;
+  top: 0;
+}
+.vjs-default-skin .vjs-play-progress {
+  /*
+    Using a data URI to create the white diagonal lines with a transparent
+      background. Surprisingly works in IE8.
+      Created using http://www.patternify.com
+    Changing the first color value will change the bar color.
+    Also using a paralax effect to make the lines move backwards.
+      The -50% left position makes that happen.
+  */
+
+  background: #66a8cc url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC) -50% 0 repeat;
+}
+.vjs-default-skin .vjs-load-progress {
+  background: #646464 /* IE8- Fallback */;
+  background: rgba(255, 255, 255, 0.2);
+}
+/* there are child elements of the load progress bar that represent the
+   specific time ranges that have been buffered */
+.vjs-default-skin .vjs-load-progress div {
+  background: #787878 /* IE8- Fallback */;
+  background: rgba(255, 255, 255, 0.1);
+}
+.vjs-default-skin .vjs-seek-handle {
+  width: 1.5em;
+  height: 100%;
+}
+.vjs-default-skin .vjs-seek-handle:before {
+  padding-top: 0.1em /* Minor adjustment */;
+}
+/* Live Mode
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin.vjs-live .vjs-time-controls,
+.vjs-default-skin.vjs-live .vjs-time-divider,
+.vjs-default-skin.vjs-live .vjs-progress-control {
+  display: none;
+}
+.vjs-default-skin.vjs-live .vjs-live-display {
+  display: block;
+}
+/* Live Display
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-live-display {
+  display: none;
+  font-size: 1em;
+  line-height: 3em;
+}
+/* Time Display
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-time-controls {
+  font-size: 1em;
+  /* Align vertically by making the line height the same as the control bar */
+  line-height: 3em;
+}
+.vjs-default-skin .vjs-current-time {
+  float: left;
+}
+.vjs-default-skin .vjs-duration {
+  float: left;
+}
+/* Remaining time is in the HTML, but not included in default design */
+.vjs-default-skin .vjs-remaining-time {
+  display: none;
+  float: left;
+}
+.vjs-time-divider {
+  float: left;
+  line-height: 3em;
+}
+/* Fullscreen
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-fullscreen-control {
+  width: 3.8em;
+  cursor: pointer;
+  float: right;
+}
+.vjs-default-skin .vjs-fullscreen-control:before {
+  content: "\e000";
+}
+/* Switch to the exit icon when the player is in fullscreen */
+.vjs-default-skin.vjs-fullscreen .vjs-fullscreen-control:before {
+  content: "\e00b";
+}
+/* Big Play Button (play button at start)
+--------------------------------------------------------------------------------
+Positioning of the play button in the center or other corners can be done more
+easily in the skin designer. http://designer.videojs.com/
+*/
+.vjs-default-skin .vjs-big-play-button {
+  left: 0.5em;
+  top: 0.5em;
+  font-size: 3em;
+  display: block;
+  z-index: 2;
+  position: absolute;
+  width: 4em;
+  height: 2.6em;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 1;
+  /* Need a slightly gray bg so it can be seen on black backgrounds */
+  /* background-color-with-alpha */
+  background-color: #07141e;
+  background-color: rgba(7, 20, 30, 0.7);
+  border: 0.1em solid #3b4249;
+  /* border-radius */
+  -webkit-border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  border-radius: 0.8em;
+  /* box-shadow */
+  -webkit-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+  /* transition */
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* Optionally center */
+.vjs-default-skin.vjs-big-play-centered .vjs-big-play-button {
+  /* Center it horizontally */
+  left: 50%;
+  margin-left: -2.1em;
+  /* Center it vertically */
+  top: 50%;
+  margin-top: -1.4000000000000001em;
+}
+/* Hide if controls are disabled */
+.vjs-default-skin.vjs-controls-disabled .vjs-big-play-button {
+  display: none;
+}
+/* Hide when video starts playing */
+.vjs-default-skin.vjs-has-started .vjs-big-play-button {
+  display: none;
+}
+/* Hide on mobile devices. Remove when we stop using native controls
+    by default on mobile  */
+.vjs-default-skin.vjs-using-native-controls .vjs-big-play-button {
+  display: none;
+}
+.vjs-default-skin:hover .vjs-big-play-button,
+.vjs-default-skin .vjs-big-play-button:focus {
+  outline: 0;
+  border-color: #fff;
+  /* IE8 needs a non-glow hover state */
+  background-color: #505050;
+  background-color: rgba(50, 50, 50, 0.75);
+  /* box-shadow */
+  -webkit-box-shadow: 0 0 3em #ffffff;
+  -moz-box-shadow: 0 0 3em #ffffff;
+  box-shadow: 0 0 3em #ffffff;
+  /* transition */
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  transition: all 0s;
+}
+.vjs-default-skin .vjs-big-play-button:before {
+  content: "\e001";
+  font-family: VideoJS;
+  /* In order to center the play icon vertically we need to set the line height
+     to the same as the button height */
+
+  line-height: 2.6em;
+  text-shadow: 0.05em 0.05em 0.1em #000;
+  text-align: center /* Needed for IE8 */;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.vjs-error .vjs-big-play-button {
+  display: none;
+}
+/* Error Display
+--------------------------------------------------------------------------------
+*/
+.vjs-error-display {
+  display: none;
+}
+.vjs-error .vjs-error-display {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.vjs-error .vjs-error-display:before {
+  content: 'X';
+  font-family: Arial;
+  font-size: 4em;
+  color: #666666;
+  /* In order to center the play icon vertically we need to set the line height
+     to the same as the button height */
+
+  line-height: 1;
+  text-shadow: 0.05em 0.05em 0.1em #000;
+  text-align: center /* Needed for IE8 */;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -0.5em;
+  width: 100%;
+}
+.vjs-error-display div {
+  position: absolute;
+  bottom: 1em;
+  right: 0;
+  left: 0;
+  font-size: 1.4em;
+  text-align: center;
+  padding: 3px;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.5);
+}
+.vjs-error-display a,
+.vjs-error-display a:visited {
+  color: #F4A460;
+}
+/* Loading Spinner
+--------------------------------------------------------------------------------
+*/
+.vjs-loading-spinner {
+  /* Should be hidden by default */
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 4em;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+  opacity: 0.75;
+}
+/* Show the spinner when waiting for data and seeking to a new time */
+.vjs-waiting .vjs-loading-spinner,
+.vjs-seeking .vjs-loading-spinner {
+  display: block;
+  /* only animate when showing because it can be processor heavy */
+  /* animation */
+  -webkit-animation: spin 1.5s infinite linear;
+  -moz-animation: spin 1.5s infinite linear;
+  -o-animation: spin 1.5s infinite linear;
+  animation: spin 1.5s infinite linear;
+}
+/* Errors are unrecoverable without user interaction so hide the spinner */
+.vjs-error .vjs-loading-spinner {
+  display: none;
+  /* ensure animation doesn't continue while hidden */
+  /* animation */
+  -webkit-animation: none;
+  -moz-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+.vjs-default-skin .vjs-loading-spinner:before {
+  content: "\e01e";
+  font-family: VideoJS;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  text-shadow: 0em 0em 0.1em #000;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+/* Menu Buttons (Captions/Subtitles/etc.)
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-menu-button {
+  float: right;
+  cursor: pointer;
+}
+.vjs-default-skin .vjs-menu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0em;
+  /* (Width of vjs-menu - width of button) / 2 */
+
+  width: 0em;
+  height: 0em;
+  margin-bottom: 3em;
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
+  border-top: 1.55em solid #000000;
+  /* Same width top as ul bottom */
+
+  border-top-color: rgba(7, 40, 50, 0.5);
+  /* Same as ul background */
+
+}
+/* Button Pop-up Menu */
+.vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content {
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 10em;
+  bottom: 1.5em;
+  /* Same bottom as vjs-menu border-top */
+
+  max-height: 15em;
+  overflow: auto;
+  left: -5em;
+  /* Width of menu - width of button / 2 */
+
+  /* background-color-with-alpha */
+  background-color: #07141e;
+  background-color: rgba(7, 20, 30, 0.7);
+  /* box-shadow */
+  -webkit-box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
+  box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
+}
+.vjs-default-skin .vjs-menu-button:hover .vjs-control-content .vjs-menu,
+.vjs-default-skin .vjs-control-content .vjs-menu.vjs-lock-showing {
+  display: block;
+}
+/* prevent menus from opening while scrubbing (FF, IE) */
+.vjs-default-skin.vjs-scrubbing .vjs-menu-button:hover .vjs-control-content .vjs-menu {
+  display: none;
+}
+.vjs-default-skin .vjs-menu-button ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0.3em 0 0.3em 0;
+  line-height: 1.4em;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: lowercase;
+}
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected {
+  background-color: #000;
+}
+.vjs-default-skin .vjs-menu-button ul li:focus,
+.vjs-default-skin .vjs-menu-button ul li:hover,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:focus,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:hover {
+  outline: 0;
+  color: #111;
+  /* background-color-with-alpha */
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.75);
+  /* box-shadow */
+  -webkit-box-shadow: 0 0 1em #ffffff;
+  -moz-box-shadow: 0 0 1em #ffffff;
+  box-shadow: 0 0 1em #ffffff;
+}
+.vjs-default-skin .vjs-menu-button ul li.vjs-menu-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 2em;
+  padding: 0;
+  margin: 0 0 0.3em 0;
+  font-weight: bold;
+  cursor: default;
+}
+/* Subtitles Button */
+.vjs-default-skin .vjs-subtitles-button:before {
+  content: "\e00c";
+}
+/* Captions Button */
+.vjs-default-skin .vjs-captions-button:before {
+  content: "\e008";
+}
+/* Chapters Button */
+.vjs-default-skin .vjs-chapters-button:before {
+  content: "\e00c";
+}
+.vjs-default-skin .vjs-chapters-button.vjs-menu-button .vjs-menu .vjs-menu-content {
+  width: 24em;
+  left: -12em;
+}
+/* Replacement for focus outline */
+.vjs-default-skin .vjs-captions-button:focus .vjs-control-content:before,
+.vjs-default-skin .vjs-captions-button:hover .vjs-control-content:before {
+  /* box-shadow */
+  -webkit-box-shadow: 0 0 1em #ffffff;
+  -moz-box-shadow: 0 0 1em #ffffff;
+  box-shadow: 0 0 1em #ffffff;
+}
+/*
+REQUIRED STYLES (be careful overriding)
+================================================================================
+When loading the player, the video tag is replaced with a DIV,
+that will hold the video tag or object tag for other playback methods.
+The div contains the video playback element (Flash or HTML5) and controls,
+and sets the width and height of the video.
+
+** If you want to add some kind of border/padding (e.g. a frame), or special
+positioning, use another containing element. Otherwise you risk messing up
+control positioning and full window mode. **
+*/
+.video-js {
+  background-color: #000;
+  position: relative;
+  padding: 0;
+  /* Start with 10px for base font size so other dimensions can be em based and
+     easily calculable. */
+
+  font-size: 10px;
+  /* Allow poster to be vertically aligned. */
+
+  vertical-align: middle;
+  /*  display: table-cell; */
+  /*This works in Safari but not Firefox.*/
+
+  /* Provide some basic defaults for fonts */
+
+  font-weight: normal;
+  font-style: normal;
+  /* Avoiding helvetica: issue #376 */
+
+  font-family: Arial, sans-serif;
+  /* Turn off user selection (text highlighting) by default.
+     The majority of player components will not be text blocks.
+     Text areas will need to turn user selection back on. */
+
+  /* user-select */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Playback technology elements expand to the width/height of the containing div
+    <video> or <object> */
+.video-js .vjs-tech {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Fix for Firefox 9 fullscreen (only if it is enabled). Not needed when
+   checking fullScreenEnabled. */
+.video-js:-moz-full-screen {
+  position: absolute;
+}
+/* Fullscreen Styles */
+body.vjs-full-window {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  /* Fix for IE6 full-window. http://www.cssplay.co.uk/layouts/fixed.html */
+  overflow-y: auto;
+}
+.video-js.vjs-fullscreen {
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+  /* IE6 full-window (underscore hack) */
+  _position: absolute;
+}
+.video-js:-webkit-full-screen {
+  width: 100% !important;
+  height: 100% !important;
+}
+.video-js.vjs-fullscreen.vjs-user-inactive {
+  cursor: none;
+}
+/* Poster Styles */
+.vjs-poster {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-color: #000000;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.vjs-poster img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  padding: 0;
+  width: 100%;
+}
+/* Hide the poster after the video has started playing */
+.video-js.vjs-has-started .vjs-poster {
+  display: none;
+}
+/* Don't hide the poster if we're playing audio */
+.video-js.vjs-audio.vjs-has-started .vjs-poster {
+  display: block;
+}
+/* Hide the poster when controls are disabled because it's clickable
+    and the native poster can take over */
+.video-js.vjs-controls-disabled .vjs-poster {
+  display: none;
+}
+/* Hide the poster when native controls are used otherwise it covers them */
+.video-js.vjs-using-native-controls .vjs-poster {
+  display: none;
+}
+/* Text Track Styles */
+/* Overall track holder for both captions and subtitles */
+.video-js .vjs-text-track-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 3em;
+  right: 0;
+  pointer-events: none;
+}
+/* Captions Settings Dialog */
+.vjs-caption-settings {
+  position: relative;
+  top: 1em;
+  background-color: #000;
+  opacity: 0.75;
+  color: #FFF;
+  margin: 0 auto;
+  padding: 0.5em;
+  height: 15em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  width: 40em;
+}
+.vjs-caption-settings .vjs-tracksettings {
+  top: 0;
+  bottom: 2em;
+  left: 0;
+  right: 0;
+  position: absolute;
+  overflow: auto;
+}
+.vjs-caption-settings .vjs-tracksettings-colors,
+.vjs-caption-settings .vjs-tracksettings-font {
+  float: left;
+}
+.vjs-caption-settings .vjs-tracksettings-colors:after,
+.vjs-caption-settings .vjs-tracksettings-font:after,
+.vjs-caption-settings .vjs-tracksettings-controls:after {
+  clear: both;
+}
+.vjs-caption-settings .vjs-tracksettings-controls {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+.vjs-caption-settings .vjs-tracksetting {
+  margin: 5px;
+  padding: 3px;
+  min-height: 40px;
+}
+.vjs-caption-settings .vjs-tracksetting label {
+  display: block;
+  width: 100px;
+  margin-bottom: 5px;
+}
+.vjs-caption-settings .vjs-tracksetting span {
+  display: inline;
+  margin-left: 5px;
+}
+.vjs-caption-settings .vjs-tracksetting > div {
+  margin-bottom: 5px;
+  min-height: 20px;
+}
+.vjs-caption-settings .vjs-tracksetting > div:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  min-height: 0;
+}
+.vjs-caption-settings label > input {
+  margin-right: 10px;
+}
+.vjs-caption-settings input[type="button"] {
+  width: 40px;
+  height: 40px;
+}
+/* Hide disabled or unsupported controls */
+.vjs-hidden {
+  display: none !important;
+}
+.vjs-lock-showing {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+}
+/*  In IE8 w/ no JavaScript (no HTML5 shim), the video tag doesn't register.
+    The .video-js classname on the video tag also isn't considered.
+    This optional paragraph inside the video tag can provide a message to users
+    about what's required to play video. */
+.vjs-no-js {
+  padding: 2em;
+  color: #ccc;
+  background-color: #333;
+  font-size: 1.8em;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 30em;
+  height: 15em;
+  margin: 0 auto;
+}
+.vjs-no-js a,
+.vjs-no-js a:visited {
+  color: #F4A460;
+}
+/* -----------------------------------------------------------------------------
+The original source of this file lives at
+https://github.com/videojs/video.js/blob/master/src/css/video-js.less */
+
+/*! Flickity v1.1.2
+http://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus { outline: none; }
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+          tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  background: hsla(0, 0%, 100%, 0.75);
+  cursor: pointer;
+  /* vertically center */
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.flickity-prev-next-button:hover { background: white; }
+
+.flickity-prev-next-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #09F;
+}
+
+.flickity-prev-next-button:active {
+  filter: alpha(opacity=60); /* IE8 */
+  opacity: 0.6;
+}
+
+.flickity-prev-next-button.previous { left: 10px; }
+.flickity-prev-next-button.next { right: 10px; }
+/* right to left */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
+}
+
+.flickity-prev-next-button:disabled {
+  filter: alpha(opacity=30); /* IE8 */
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.flickity-prev-next-button svg {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #333;
+}
+
+/* color & size if no SVG - IE8 and Android 2.3 */
+.flickity-prev-next-button.no-svg {
+  color: #333;
+  font-size: 26px;
+}
+
+/* ---- page dots ---- */
+
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots { direction: rtl; }
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  filter: alpha(opacity=25); /* IE8 */
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.flickity-page-dots .dot.is-selected {
+  filter: alpha(opacity=100); /* IE8 */
+  opacity: 1;
+}
+
+/*
+ * qTip2 - Pretty powerful tooltips - v2.2.1
+ * http://qtip2.com
+ *
+ * Copyright (c) 2014 
+ * Released under the MIT licenses
+ * http://jquery.org/license
+ *
+ * Date: Sun Sep 7 2014 12:09 GMT+0100+0100
+ * Plugins: tips modal viewport svg imagemap ie6
+ * Styles: core basic css3
+ */
+.qtip{
+	position: absolute;
+	left: -28000px;
+	top: -28000px;
+	display: none;
+
+	max-width: 280px;
+	min-width: 50px;
+
+	font-size: 10.5px;
+	line-height: 12px;
+
+	direction: ltr;
+
+	box-shadow: none;
+	padding: 0;
+}
+
+	.qtip-content{
+		position: relative;
+		padding: 5px 9px;
+		overflow: hidden;
+
+		text-align: left;
+		word-wrap: break-word;
+	}
+
+	.qtip-titlebar{
+		position: relative;
+		padding: 5px 35px 5px 10px;
+		overflow: hidden;
+
+		border-width: 0 0 1px;
+		font-weight: bold;
+	}
+
+	.qtip-titlebar + .qtip-content{ border-top-width: 0 !important; }
+
+	/* Default close button class */
+	.qtip-close{
+		position: absolute;
+		right: -9px; top: -9px;
+		z-index: 11; /* Overlap .qtip-tip */
+
+		cursor: pointer;
+		outline: medium none;
+
+		border: 1px solid transparent;
+	}
+
+		.qtip-titlebar .qtip-close{
+			right: 4px; top: 50%;
+			margin-top: -9px;
+		}
+
+		* html .qtip-titlebar .qtip-close{ top: 16px; } /* IE fix */
+
+		.qtip-titlebar .ui-icon,
+		.qtip-icon .ui-icon{
+			display: block;
+			text-indent: -1000em;
+			direction: ltr;
+		}
+
+		.qtip-icon, .qtip-icon .ui-icon{
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			text-decoration: none;
+		}
+
+			.qtip-icon .ui-icon{
+				width: 18px;
+				height: 14px;
+
+				line-height: 14px;
+				text-align: center;
+				text-indent: 0;
+				font: normal bold 10px/13px Tahoma,sans-serif;
+
+				color: inherit;
+				background: transparent none no-repeat -100em -100em;
+			}
+
+/* Applied to 'focused' tooltips e.g. most recently displayed/interacted with */
+.qtip-focus{}
+
+/* Applied on hover of tooltips i.e. added/removed on mouseenter/mouseleave respectively */
+.qtip-hover{}
+
+/* Default tooltip style */
+.qtip-default{
+	border: 1px solid #F1D031;
+
+	background-color: #FFFFA3;
+	color: #555;
+}
+
+	.qtip-default .qtip-titlebar{
+		background-color: #FFEF93;
+	}
+
+	.qtip-default .qtip-icon{
+		border-color: #CCC;
+		background: #F1F1F1;
+		color: #777;
+	}
+
+	.qtip-default .qtip-titlebar .qtip-close{
+		border-color: #AAA;
+		color: #111;
+	}
+
+
+/*! Light tooltip style */
+.qtip-light{
+	background-color: white;
+	border-color: #E2E2E2;
+	color: #454545;
+}
+
+	.qtip-light .qtip-titlebar{
+		background-color: #f1f1f1;
+	}
+
+
+/*! Dark tooltip style */
+.qtip-dark{
+	background-color: #505050;
+	border-color: #303030;
+	color: #f3f3f3;
+}
+
+	.qtip-dark .qtip-titlebar{
+		background-color: #404040;
+	}
+
+	.qtip-dark .qtip-icon{
+		border-color: #444;
+	}
+
+	.qtip-dark .qtip-titlebar .ui-state-hover{
+		border-color: #303030;
+	}
+
+
+/*! Cream tooltip style */
+.qtip-cream{
+	background-color: #FBF7AA;
+	border-color: #F9E98E;
+	color: #A27D35;
+}
+
+	.qtip-cream .qtip-titlebar{
+		background-color: #F0DE7D;
+	}
+
+	.qtip-cream .qtip-close .qtip-icon{
+		background-position: -82px 0;
+	}
+
+
+/*! Red tooltip style */
+.qtip-red{
+	background-color: #F78B83;
+	border-color: #D95252;
+	color: #912323;
+}
+
+	.qtip-red .qtip-titlebar{
+		background-color: #F06D65;
+	}
+
+	.qtip-red .qtip-close .qtip-icon{
+		background-position: -102px 0;
+	}
+
+	.qtip-red .qtip-icon{
+		border-color: #D95252;
+	}
+
+	.qtip-red .qtip-titlebar .ui-state-hover{
+		border-color: #D95252;
+	}
+
+
+/*! Green tooltip style */
+.qtip-green{
+	background-color: #CAED9E;
+	border-color: #90D93F;
+	color: #3F6219;
+}
+
+	.qtip-green .qtip-titlebar{
+		background-color: #B0DE78;
+	}
+
+	.qtip-green .qtip-close .qtip-icon{
+		background-position: -42px 0;
+	}
+
+
+/*! Blue tooltip style */
+.qtip-blue{
+	background-color: #E5F6FE;
+	border-color: #ADD9ED;
+	color: #5E99BD;
+}
+
+	.qtip-blue .qtip-titlebar{
+		background-color: #D0E9F5;
+	}
+
+	.qtip-blue .qtip-close .qtip-icon{
+		background-position: -2px 0;
+	}
+
+
+.qtip-shadow{
+	-webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* Add rounded corners to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, IE9+, Safari 2+ */
+.qtip-rounded,
+.qtip-tipsy,
+.qtip-bootstrap{
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.qtip-rounded .qtip-titlebar{
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+/* Youtube tooltip style */
+.qtip-youtube{
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+
+	-webkit-box-shadow: 0 0 3px #333;
+	-moz-box-shadow: 0 0 3px #333;
+	box-shadow: 0 0 3px #333;
+
+	color: white;
+	border: 0 solid transparent;
+
+	background: #4A4A4A;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#4A4A4A),color-stop(100%,black));
+	background-image: -webkit-linear-gradient(top,#4A4A4A 0,black 100%);
+	background-image: -moz-linear-gradient(top,#4A4A4A 0,black 100%);
+	background-image: -ms-linear-gradient(top,#4A4A4A 0,black 100%);
+	background-image: -o-linear-gradient(top,#4A4A4A 0,black 100%);
+}
+
+	.qtip-youtube .qtip-titlebar{
+		background-color: #4A4A4A;
+		background-color: rgba(0,0,0,0);
+	}
+
+	.qtip-youtube .qtip-content{
+		padding: .75em;
+		font: 12px arial,sans-serif;
+
+		filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#4a4a4a,EndColorStr=#000000);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#4a4a4a,EndColorStr=#000000);";
+	}
+
+	.qtip-youtube .qtip-icon{
+		border-color: #222;
+	}
+
+	.qtip-youtube .qtip-titlebar .ui-state-hover{
+		border-color: #303030;
+	}
+
+
+/* jQuery TOOLS Tooltip style */
+.qtip-jtools{
+	background: #232323;
+	background: rgba(0, 0, 0, 0.7);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#717171), to(#232323));
+	background-image: -moz-linear-gradient(top, #717171, #232323);
+	background-image: -webkit-linear-gradient(top, #717171, #232323);
+	background-image: -ms-linear-gradient(top, #717171, #232323);
+	background-image: -o-linear-gradient(top, #717171, #232323);
+
+	border: 2px solid #ddd;
+	border: 2px solid rgba(241,241,241,1);
+
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+
+	-webkit-box-shadow: 0 0 12px #333;
+	-moz-box-shadow: 0 0 12px #333;
+	box-shadow: 0 0 12px #333;
+}
+
+	/* IE Specific */
+	.qtip-jtools .qtip-titlebar{
+		background-color: transparent;
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171,endColorstr=#4A4A4A);
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171,endColorstr=#4A4A4A)";
+	}
+	.qtip-jtools .qtip-content{
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A,endColorstr=#232323);
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A,endColorstr=#232323)";
+	}
+
+	.qtip-jtools .qtip-titlebar,
+	.qtip-jtools .qtip-content{
+		background: transparent;
+		color: white;
+		border: 0 dashed transparent;
+	}
+
+	.qtip-jtools .qtip-icon{
+		border-color: #555;
+	}
+
+	.qtip-jtools .qtip-titlebar .ui-state-hover{
+		border-color: #333;
+	}
+
+
+/* Cluetip style */
+.qtip-cluetip{
+	-webkit-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+
+	background-color: #D9D9C2;
+	color: #111;
+	border: 0 dashed transparent;
+}
+
+	.qtip-cluetip .qtip-titlebar{
+		background-color: #87876A;
+		color: white;
+		border: 0 dashed transparent;
+	}
+
+	.qtip-cluetip .qtip-icon{
+		border-color: #808064;
+	}
+
+	.qtip-cluetip .qtip-titlebar .ui-state-hover{
+		border-color: #696952;
+		color: #696952;
+	}
+
+
+/* Tipsy style */
+.qtip-tipsy{
+	background: black;
+	background: rgba(0, 0, 0, .87);
+
+	color: white;
+	border: 0 solid transparent;
+
+	font-size: 11px;
+	font-family: 'Lucida Grande', sans-serif;
+	font-weight: bold;
+	line-height: 16px;
+	text-shadow: 0 1px black;
+}
+
+	.qtip-tipsy .qtip-titlebar{
+		padding: 6px 35px 0 10px;
+		background-color: transparent;
+	}
+
+	.qtip-tipsy .qtip-content{
+		padding: 6px 10px;
+	}
+
+	.qtip-tipsy .qtip-icon{
+		border-color: #222;
+		text-shadow: none;
+	}
+
+	.qtip-tipsy .qtip-titlebar .ui-state-hover{
+		border-color: #303030;
+	}
+
+
+/* Tipped style */
+.qtip-tipped{
+	border: 3px solid #959FA9;
+
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+
+	background-color: #F9F9F9;
+	color: #454545;
+
+	font-weight: normal;
+	font-family: serif;
+}
+
+	.qtip-tipped .qtip-titlebar{
+		border-bottom-width: 0;
+
+		color: white;
+		background: #3A79B8;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#3A79B8), to(#2E629D));
+		background-image: -webkit-linear-gradient(top, #3A79B8, #2E629D);
+		background-image: -moz-linear-gradient(top, #3A79B8, #2E629D);
+		background-image: -ms-linear-gradient(top, #3A79B8, #2E629D);
+		background-image: -o-linear-gradient(top, #3A79B8, #2E629D);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#3A79B8,endColorstr=#2E629D);
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#3A79B8,endColorstr=#2E629D)";
+	}
+
+	.qtip-tipped .qtip-icon{
+		border: 2px solid #285589;
+		background: #285589;
+	}
+
+		.qtip-tipped .qtip-icon .ui-icon{
+			background-color: #FBFBFB;
+			color: #555;
+		}
+
+
+/**
+ * Twitter Bootstrap style.
+ *
+ * Tested with IE 8, IE 9, Chrome 18, Firefox 9, Opera 11.
+ * Does not work with IE 7.
+ */
+.qtip-bootstrap{
+	/** Taken from Bootstrap body */
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+
+	/** Taken from Bootstrap .popover */
+	padding: 1px;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+	.qtip-bootstrap .qtip-titlebar{
+		/** Taken from Bootstrap .popover-title */
+		padding: 8px 14px;
+		margin: 0;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 18px;
+		background-color: #f7f7f7;
+		border-bottom: 1px solid #ebebeb;
+		-webkit-border-radius: 5px 5px 0 0;
+		-moz-border-radius: 5px 5px 0 0;
+		border-radius: 5px 5px 0 0;
+	}
+
+		.qtip-bootstrap .qtip-titlebar .qtip-close{
+			/**
+			 * Overrides qTip2:
+			 * .qtip-titlebar .qtip-close{
+			 *   [...]
+			 *   right: 4px;
+			 *   top: 50%;
+			 *   [...]
+			 *   border-style: solid;
+			 * }
+			 */
+			right: 11px;
+			top: 45%;
+			border-style: none;
+		}
+
+	.qtip-bootstrap .qtip-content{
+		/** Taken from Bootstrap .popover-content */
+		padding: 9px 14px;
+	}
+
+	.qtip-bootstrap .qtip-icon{
+		/**
+		 * Overrides qTip2:
+		 * .qtip-default .qtip-icon {
+		 *   border-color: #CCC;
+		 *   background: #F1F1F1;
+		 *   color: #777;
+		 * }
+		 */
+		background: transparent;
+	}
+
+		.qtip-bootstrap .qtip-icon .ui-icon{
+			/**
+			 * Overrides qTip2:
+			 * .qtip-icon .ui-icon{
+			 *   width: 18px;
+			 *   height: 14px;
+			 * }
+			 */
+			width: auto;
+			height: auto;
+
+			/* Taken from Bootstrap .close */
+			float: right;
+			font-size: 20px;
+			font-weight: bold;
+			line-height: 18px;
+			color: #000000;
+			text-shadow: 0 1px 0 #ffffff;
+			opacity: 0.2;
+			filter: alpha(opacity=20);
+		}
+
+		.qtip-bootstrap .qtip-icon .ui-icon:hover{
+			/* Taken from Bootstrap .close:hover */
+			color: #000000;
+			text-decoration: none;
+			cursor: pointer;
+			opacity: 0.4;
+			filter: alpha(opacity=40);
+		}
+
+
+/* IE9 fix - removes all filters */
+.qtip:not(.ie9haxors) div.qtip-content,
+.qtip:not(.ie9haxors) div.qtip-titlebar{
+	filter: none;
+	-ms-filter: none;
+}
+
+
+.qtip .qtip-tip{
+	margin: 0 auto;
+	overflow: hidden;
+	z-index: 10;
+
+}
+
+	/* Opera bug #357 - Incorrect tip position
+	https://github.com/Craga89/qTip2/issues/367 */
+	x:-o-prefocus, .qtip .qtip-tip{
+		visibility: hidden;
+	}
+
+	.qtip .qtip-tip,
+	.qtip .qtip-tip .qtip-vml,
+	.qtip .qtip-tip canvas{
+		position: absolute;
+
+		color: #123456;
+		background: transparent;
+		border: 0 dashed transparent;
+	}
+
+	.qtip .qtip-tip canvas{ top: 0; left: 0; }
+
+	.qtip .qtip-tip .qtip-vml{
+		behavior: url(#default#VML);
+		display: inline-block;
+		visibility: visible;
+	}
+
+
+#qtip-overlay{
+	position: fixed;
+	left: 0; top: 0;
+	width: 100%; height: 100%;
+}
+
+	/* Applied to modals with show.modal.blur set to true */
+	#qtip-overlay.blurs{ cursor: pointer; }
+
+	/* Change opacity of overlay here */
+	#qtip-overlay div{
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+
+		background-color: black;
+
+		opacity: 0.7;
+		filter:alpha(opacity=70);
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	}
+
+
+.qtipmodal-ie6fix{
+	position: absolute !important;
+}
+
+/*!
+ * SlickNav Responsive Mobile Menu v1.0.10
+ * (c) 2016 Josh Cope
+ * licensed under MIT
+ */
+.slicknav_btn {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  float: right;
+  padding: 0.438em 0.625em 0.438em 0.625em;
+  line-height: 1.125em;
+  cursor: pointer; }
+  .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+    margin-top: 0.188em; }
+
+.slicknav_menu {
+  *zoom: 1; }
+  .slicknav_menu .slicknav_menutxt {
+    display: block;
+    line-height: 1.188em;
+    float: left; }
+  .slicknav_menu .slicknav_icon {
+    float: left;
+    width: 1.125em;
+    height: 0.875em;
+    margin: 0.188em 0 0 0.438em; }
+    .slicknav_menu .slicknav_icon:before {
+      background: transparent;
+      width: 1.125em;
+      height: 0.875em;
+      display: block;
+      content: "";
+      position: absolute; }
+  .slicknav_menu .slicknav_no-text {
+    margin: 0; }
+  .slicknav_menu .slicknav_icon-bar {
+    display: block;
+    width: 1.125em;
+    height: 0.125em;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+  .slicknav_menu:before {
+    content: " ";
+    display: table; }
+  .slicknav_menu:after {
+    content: " ";
+    display: table;
+    clear: both; }
+
+.slicknav_nav {
+  clear: both; }
+  .slicknav_nav ul {
+    display: block; }
+  .slicknav_nav li {
+    display: block; }
+  .slicknav_nav .slicknav_arrow {
+    font-size: 0.8em;
+    margin: 0 0 0 0.4em; }
+  .slicknav_nav .slicknav_item {
+    cursor: pointer; }
+    .slicknav_nav .slicknav_item a {
+      display: inline; }
+  .slicknav_nav .slicknav_row {
+    display: block; }
+  .slicknav_nav a {
+    display: block; }
+  .slicknav_nav .slicknav_parent-link a {
+    display: inline; }
+
+.slicknav_brand {
+  float: left; }
+
+.slicknav_menu {
+  font-size: 16px;
+  box-sizing: border-box;
+  background: #4c4c4c;
+  padding: 5px; }
+  .slicknav_menu * {
+    box-sizing: border-box; }
+  .slicknav_menu .slicknav_menutxt {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 3px #000; }
+  .slicknav_menu .slicknav_icon-bar {
+    background-color: #fff; }
+
+.slicknav_btn {
+  margin: 5px 5px 6px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #222; }
+
+.slicknav_nav {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875em;
+  list-style: none;
+  overflow: hidden; }
+  .slicknav_nav ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 0 0 20px; }
+  .slicknav_nav .slicknav_row {
+    padding: 5px 10px;
+    margin: 2px 5px; }
+    .slicknav_nav .slicknav_row:hover {
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      background: #ccc;
+      color: #fff; }
+  .slicknav_nav a {
+    padding: 5px 10px;
+    margin: 2px 5px;
+    text-decoration: none;
+    color: #fff; }
+    .slicknav_nav a:hover {
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      background: #ccc;
+      color: #222; }
+  .slicknav_nav .slicknav_txtnode {
+    margin-left: 15px; }
+  .slicknav_nav .slicknav_item a {
+    padding: 0;
+    margin: 0; }
+  .slicknav_nav .slicknav_parent-link a {
+    padding: 0;
+    margin: 0; }
+
+.slicknav_brand {
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 7px 12px;
+  height: 44px; }
+
+.vjs-sublime-skin {
+  color: white; }
+  .vjs-sublime-skin .vjs-poster:focus, .vjs-sublime-skin .vjs-control:focus {
+    outline: none; }
+  .vjs-sublime-skin .vjs-big-play-button {
+    line-height: 50px;
+    margin: -25px;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    -webkit-transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    z-index: 2; }
+    .vjs-sublime-skin .vjs-big-play-button:before {
+      border-color: transparent transparent transparent white;
+      border-style: solid;
+      border-width: 25px 0 25px 50px;
+      content: "";
+      display: block; }
+  .vjs-sublime-skin.vjs-controls-disabled .vjs-big-play-button, .vjs-sublime-skin.vjs-has-started .vjs-big-play-button, .vjs-sublime-skin.vjs-using-native-controls .vjs-big-play-button {
+    opacity: 0;
+    pointer-events: none; }
+  .vjs-sublime-skin .vjs-control-bar {
+    height: 50px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2; }
+  .vjs-sublime-skin.vjs-has-started .vjs-control-bar {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+  .vjs-sublime-skin.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+    opacity: 0;
+    -webkit-transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+  .vjs-sublime-skin.vjs-has-started .vjs-poster {
+    display: none; }
+  .vjs-sublime-skin.vjs-using-native-controls .vjs-control-bar, .vjs-sublime-skin.vjs-controls-disabled .vjs-control-bar {
+    display: none; }
+  .vjs-sublime-skin .vjs-progress-control {
+    position: absolute;
+    top: 0;
+    right: 95px;
+    bottom: 0;
+    left: 50px; }
+    .vjs-sublime-skin .vjs-progress-control .vjs-progress-holder {
+      cursor: pointer;
+      height: 20px;
+      margin-top: -10px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0; }
+      .vjs-sublime-skin .vjs-progress-control .vjs-progress-holder:after {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+        content: "";
+        display: block;
+        height: 4px;
+        margin-top: -2px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0; }
+    .vjs-sublime-skin .vjs-progress-control .vjs-play-progress {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 2px;
+      height: 4px;
+      margin-top: -2px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0; }
+  .vjs-sublime-skin .vjs-play-control {
+    cursor: pointer;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    height: 16px;
+    width: 15px; }
+    .vjs-sublime-skin .vjs-play-control:before {
+      border-color: transparent transparent transparent white;
+      border-style: solid;
+      border-width: 8px 0 8px 15px;
+      content: "";
+      display: block; }
+  .vjs-sublime-skin.vjs-playing .vjs-play-control:before, .vjs-sublime-skin.vjs-playing .vjs-play-control:after {
+    background-color: white;
+    border: none;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 6px; }
+  .vjs-sublime-skin.vjs-playing .vjs-play-control:after {
+    left: auto;
+    right: 0; }
+  .vjs-sublime-skin .vjs-fullscreen-control {
+    border: 3px solid white;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-top: -7px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    height: 14px;
+    width: 22px; }
+  .vjs-sublime-skin.vjs-fullscreen .vjs-fullscreen-control {
+    background: white; }
+    .vjs-sublime-skin.vjs-fullscreen .vjs-fullscreen-control:after {
+      background: black;
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 5px;
+      width: 5px; }
+  .vjs-sublime-skin .vjs-volume-control {
+    cursor: pointer;
+    margin-top: -7px;
+    position: absolute;
+    top: 50%;
+    right: 55px;
+    height: 14px;
+    width: 22px; }
+  .vjs-sublime-skin .vjs-volume-bar {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAcCAQAAACw95UnAAAAMElEQVRIx2NgoBL4n4YKGUYNHkEG4zJg1OCRYDCpBowaPJwMppbLRg0eNXjUYBLEAXWNUA6QNm1lAAAAAElFTkSuQmCC);
+    background-size: 22px 14px;
+    height: 100%;
+    width: 100%; }
+  .vjs-sublime-skin .vjs-volume-level {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAcAQAAAAAyhWABAAAAAnRSTlMAAHaTzTgAAAAZSURBVHgBYwAB/g9EUv+JokCqiaT+U4MCAPKPS7WUUOc1AAAAAElFTkSuQmCC);
+    background-size: 22px 14px;
+    height: 100%; }
+  .vjs-sublime-skin .vjs-current-time,
+  .vjs-sublime-skin .vjs-time-divider,
+  .vjs-sublime-skin .vjs-duration,
+  .vjs-sublime-skin .vjs-remaining-time,
+  .vjs-sublime-skin .vjs-load-progress,
+  .vjs-sublime-skin .vjs-play-progress .vjs-control-text,
+  .vjs-sublime-skin .vjs-play-control .vjs-control-content,
+  .vjs-sublime-skin .vjs-fullscreen-control .vjs-control-text,
+  .vjs-sublime-skin .vjs-slider-handle,
+  .vjs-sublime-skin .vjs-volume-handle,
+  .vjs-sublime-skin .vjs-live-controls,
+  .vjs-sublime-skin .vjs-playback-rate,
+  .vjs-sublime-skin .vjs-subtitles-button,
+  .vjs-sublime-skin .vjs-captions-button,
+  .vjs-sublime-skin .vjs-mute-control,
+  .vjs-sublime-skin .vjs-hidden {
+    display: none; }
+
+.video-js {
+  background-color: black;
+  padding: 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle; }
+  .video-js .vjs-tech {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+  .video-js:-moz-full-screen {
+    position: absolute; }
+  .video-js.vjs-fullscreen {
+    position: fixed;
+    overflow: hidden;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important; }
+  .video-js:-webkit-full-screen {
+    width: 100% !important;
+    height: 100% !important; }
+  .video-js.vjs-fullscreen.vjs-user-inactive {
+    cursor: none; }
+
+body.vjs-full-window {
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+  padding: 0; }
+
+.vjs-poster {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  cursor: pointer;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%; }
+  .vjs-poster img {
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    padding: 0;
+    width: 100%; }
+  .video-js.vjs-using-native-controls .vjs-poster {
+    display: none; }
+
+
+/*# sourceMappingURL=vendor.css.map*/

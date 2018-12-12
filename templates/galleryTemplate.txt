@@ -1,0 +1,4 @@
+<div class="gallery-cell">
+  <div class="cell-title"></div>
+   <video src="<<SRC>>" poster="<<POSTER>>" id="<<ID>>" width="auto" height="auto" controls="controls" data-setup="{&quot;autoplay&quot;: false}" class="video-js vjs-sublime-skin"></video>
+</div>
