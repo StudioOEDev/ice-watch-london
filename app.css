@@ -7493,5 +7493,10 @@ a.social-button {
       #legal #legal-bt .arrow.down {
         transform: rotate(90deg); }
 
+.nav-legal {
+  float: left;
+  font-size: 16px;
+  padding-right: 10px; }
+
 
 /*# sourceMappingURL=app.css.map*/
