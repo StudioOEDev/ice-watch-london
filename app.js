@@ -1215,7 +1215,8 @@ function initWaypoints() {
         //hideNav()
         
 			} else {
-				destroySlideshow('.media-gallery');
+        destroySlideshow('.media-gallery');
+        whiteNav()
 				initSlideshow('.media-gallery', 'slideshow1', aspectRatio, true, function() {
 					if(!isMobile) {
             playSlideshow('.media-gallery');
@@ -1237,7 +1238,7 @@ function initWaypoints() {
                 }
 			} else {
 				if(!isMobile) {
-          redNav();
+          whiteNav();
           showNav()
                 }
 			}
@@ -1256,7 +1257,7 @@ function initWaypoints() {
 				if(!isMobile) {
 					// hideNav();
           playSlideshow('.media-gallery');
-          redNav()
+          whiteNav()
 				}
 			} else {
 				if(!isMobile) {
